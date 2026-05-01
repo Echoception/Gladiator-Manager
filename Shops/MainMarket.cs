@@ -15,32 +15,42 @@ namespace Gladiator_Manager.Shops
 
         public void Menu(UserInput userInput, GladiatorMarket gladiatorMarket, Player player, Accommodations accommodations)
         {
-            Console.Clear();
+            int choice = 99;
 
-            Console.WriteLine("[1] - Gladiator Market");
-            Console.WriteLine("[2] - Item Market");
-            Console.WriteLine("[3] - Facility upgrades");
-
-            int choice = userInput.PickValidInt();
-
-            switch(choice)
+            do
             {
-                case 1:
-                    gladiatorMarket.BuyOrSellMenu(userInput, player, accommodations);
-                    break;
+                Console.Clear();
+                Console.WriteLine();
 
-                case 2:
-                    Console.WriteLine("Not Implimented");
-                    break;
+                Console.WriteLine("[1] - Gladiator Market");
+                Console.WriteLine("[2] - Item Market");
+                Console.WriteLine("[3] - Facility upgrades");
+                Console.WriteLine("[0] - EXIT");
 
-                case 3:
-                    Console.WriteLine("Not Implimented");
-                    break;
+                choice = userInput.PickValidInt();
 
-                default:
-                    userInput.DisplayPickValidOptionText();
-                    break;
-            }
+                switch (choice)
+                {
+                    case 1:
+                        gladiatorMarket.BuyOrSellMenu(userInput, player, accommodations);
+                        break;
+
+                    case 2:
+                        Console.WriteLine("Not Implimented");
+                        break;
+
+                    case 3:
+                        Console.WriteLine("Not Implimented");
+                        break;
+
+                    case 0:
+                        return;
+
+                    default:
+                        userInput.DisplayPickValidOptionText();
+                        break;
+                }
+            } while (choice != 0);
 
         }
 

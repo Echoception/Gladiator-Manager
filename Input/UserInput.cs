@@ -58,6 +58,28 @@ namespace Gladiator_Manager.Input
 
         }
 
+        public bool PickYesOrNo()
+        {
+            bool result = false;
+            bool validChoice = false;
+
+            Console.WriteLine("[1] - Yes");
+            Console.WriteLine("[2] - No");
+
+            int choice = PickValidInt();
+
+            if(choice == 1)
+            {
+                result = true;
+            }
+            else
+            {
+                result = false;
+            }
+
+            return result;
+        }
+
 
         public void DisplayPickValidOptionText()
         {

@@ -46,7 +46,7 @@ namespace Gladiator_Manager.Shops
             int count = 1;
 
             Console.Clear();
-            Console.WriteLine($"{Environment.NewLine}Pick a gladiator to buy: {Environment.NewLine}");
+            Console.WriteLine($"{Environment.NewLine}Pick a gladiator to view: {Environment.NewLine}");
 
             foreach (var glad in GladiatorsForSale)
             {
@@ -59,29 +59,37 @@ namespace Gladiator_Manager.Shops
 
         public void BuyOrSellMenu(UserInput userInput, Player player, Accommodations accommodations)
         {
-            Console.Clear();
-
-            Console.WriteLine($"Would you like to buy or sell: {Environment.NewLine}");
-            Console.WriteLine("[1] - Buy");
-            Console.WriteLine("[2] - Sell");
-
-            int choice = userInput.PickValidInt();
-
-            switch(choice)
+            int choice = 99;
+            do
             {
-                case 1:
-                    BuyGladiators(player, userInput, accommodations);
-                    break;
+                Console.Clear();
 
-                case 2:
-                    Console.WriteLine("Not implimented");
-                    Console.ReadKey();
-                    break;
+                Console.WriteLine($"{Environment.NewLine}Would you like to buy or sell: {Environment.NewLine}");
+                Console.WriteLine("[1] - Buy");
+                Console.WriteLine("[2] - Sell");
+                Console.WriteLine("[0] - EXIT");
 
-                default:
-                    userInput.DisplayPickValidOptionText();
-                    break;
-            }
+                choice = userInput.PickValidInt();
+
+                switch (choice)
+                {
+                    case 1:
+                        BuyGladiators(player, userInput, accommodations);
+                        break;
+
+                    case 2:
+                        Console.WriteLine("Not implimented");
+                        Console.ReadKey();
+                        break;
+
+                    case 0:
+                        return;
+
+                    default:
+                        userInput.DisplayPickValidOptionText();
+                        break;
+                }
+            } while (choice != 0);
         }
 
         public void BuyGladiators(Player player, UserInput userInput, Accommodations accommodations)
@@ -98,17 +106,27 @@ namespace Gladiator_Manager.Shops
             
                 if (choice > 0)
                 {
-                    player.AddGladiatorToRoster(GladiatorsForSale[choice - 1], accommodations);
-                    _gladiatorsForSale.Remove(GladiatorsForSale[choice - 1]);
+                    Console.Clear();
+                    GladiatorsForSale[choice - 1].DisplayStats();
+                    Console.WriteLine($"{Environment.NewLine}Would you like to buy this gladiator? {Environment.NewLine}");
+                    bool buy = userInput.PickYesOrNo();
+
+                    if(buy)
+                    {
+                        player.AddGladiatorToRoster(GladiatorsForSale[choice - 1], accommodations);
+                        _gladiatorsForSale.Remove(GladiatorsForSale[choice - 1]);
+                    }
                 }
 
                 DisplayGladiatorsForSale();
 
             } while (choice > 0);
 
-            Console.WriteLine("EXITED");
-            Console.ReadKey();
+            //Console.WriteLine("EXITED");
+            //Console.ReadKey();
         }
+
+
 
 
     }
