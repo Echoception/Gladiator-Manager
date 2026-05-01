@@ -5,6 +5,7 @@ using Gladiator_Manager.Input;
 using Gladiator_Manager.PlayerClass;
 using Gladiator_Manager.Shops;
 using Gladiator_Manager.SystemCreators;
+using Gladiator_Manager.Tourneys;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,16 +21,16 @@ namespace Gladiator_Manager.Facilities
         // Menu of options
 
         public void DisplayMainHub(Player player, GladiatorMarket gladiatorMarket, BattleHandler battleHandler, UserInput userInput, DateHandler dateHandler,
-            Accommodations accommodations, GladiatorCreator gladiatorCreator, MainMarket mainMarket)
+            Accommodations accommodations, GladiatorCreator gladiatorCreator, MainMarket mainMarket, AllTourneys allTourneys)
         {
             Console.WriteLine();
             dateHandler.DisplayDate();
             Console.WriteLine($"{Environment.NewLine}{Environment.NewLine}{Environment.NewLine}");
-            Menu(player, gladiatorMarket, battleHandler, userInput, dateHandler, accommodations, gladiatorCreator, mainMarket);
+            Menu(player, gladiatorMarket, battleHandler, userInput, dateHandler, accommodations, gladiatorCreator, mainMarket, allTourneys);
         }
 
         public void Menu(Player player, GladiatorMarket gladiatorMarket, BattleHandler battleHandler, UserInput userInput, DateHandler dateHandler,
-            Accommodations accommodations, GladiatorCreator gladiatorCreator, MainMarket mainMarket)
+            Accommodations accommodations, GladiatorCreator gladiatorCreator, MainMarket mainMarket, AllTourneys allTourneys)
         { 
 
             Console.WriteLine("[1] - Go to the Market");
@@ -50,8 +51,7 @@ namespace Gladiator_Manager.Facilities
 
                     if(player.GladiatorList.Count > 0)
                     {
-                        Gladiator tod = gladiatorCreator.CreateRandomGladiator();
-                        battleHandler.Battle(player.GladiatorList[0], tod);
+                        allTourneys.PickRank1Tourney(userInput);
                     }
                     else
                     {
