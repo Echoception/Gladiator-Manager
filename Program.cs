@@ -28,15 +28,11 @@ UserInput userInput = new UserInput();
 
 Accommodations accommodations = new Accommodations();
 
-Ctimer timer = new Ctimer(2);
+Ctimer timer = new Ctimer(1);
 
 AllTourneys allTourneys = new AllTourneys();
 allTourneys.UnlockRank1Tourneys();
 
-Gladiator sam = gladiatorCreator.CreateRandomGladiator();
-Gladiator bob = gladiatorCreator.CreateRandomGladiator();
-
-battleHandler.Battle(sam, bob, timer);
 
 
 while(true)

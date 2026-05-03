@@ -19,24 +19,27 @@ namespace Gladiator_Manager.BattleSystem
             {
                 do
                 {
+                    Console.Clear();
                     ShowHealthValues(glad1, glad2);
-                    timer.StartTimer();
 
                     if (glad1.Health > 0)
                     {
                         glad2.TakeDamage(glad1);
+                        //timer.StartTimer();
                     }
 
+                    Console.Clear();
                     ShowHealthValues(glad1, glad2);
-                    timer.StartTimer();
 
                     if (glad2.Health > 0)
                     {
                         glad1.TakeDamage(glad2);
+                        //timer.StartTimer();
                     }
 
                 } while (glad1.Health > 0 && glad2.Health > 0);
 
+                Console.Clear();
                 ShowHealthValues(glad1, glad2);
                 Console.ReadKey();
             }
@@ -45,7 +48,17 @@ namespace Gladiator_Manager.BattleSystem
 
         public void ShowHealthValues(Gladiator glad1, Gladiator glad2)
         {
-            Console.WriteLine($"{glad1.Name} - {glad1.Health} \t\t {glad2.Name} - {glad2.Health}");
+            //Console.WriteLine($"{glad1.Name} - {glad1.Health} \t\t {glad2.Name} - {glad2.Health}");
+            Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
+            Console.Write($"{glad1.Name} : ");
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.Write($"{glad1.Health} / {glad1.MaxHealth} HP\t\t");
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
+            Console.Write($"{glad2.Name} : ");
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine($"{glad2.Health} / {glad2.MaxHealth} HP");
+            Console.ForegroundColor = ConsoleColor.White;
         }
 
         //----

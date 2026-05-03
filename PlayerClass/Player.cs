@@ -29,12 +29,40 @@ namespace Gladiator_Manager.PlayerClass
 
         public void DisplayGladiatorList()
         {
+            int count = 1;
             Console.WriteLine();
             foreach(Gladiator glad in _gladiatorList)
             {
-                Console.WriteLine($"{glad.Name}  -  {glad.Rating}");
+                Console.WriteLine($"[{count}] {glad.Name}  -  {glad.Rating}");
+                count++;
             }
             //Console.ReadKey();
+        }
+
+        public void ViewGladiatorInList(UserInput userInput)
+        {
+            int choice = 99;
+
+            do
+            {
+                Console.Clear();
+                Console.WriteLine();
+                DisplayGladiatorList();
+
+                Console.WriteLine();
+                Console.WriteLine("[0] - EXIT");
+
+                choice = userInput.PickItemFromList(GladiatorList);
+
+                if (choice > 0)
+                {
+                    Console.Clear();
+                    Console.WriteLine();
+                    GladiatorList[choice - 1].DisplayStats();
+                    Console.ReadKey();
+                }
+
+            } while (choice > 0);
         }
 
         public void AddGladiatorToRoster(Gladiator gladiator, Accommodations accommodations)
@@ -58,13 +86,23 @@ namespace Gladiator_Manager.PlayerClass
             Console.WriteLine();
             Console.WriteLine($"Pick a gladiator: {Environment.NewLine}");
             DisplayGladiatorList();
+            Console.WriteLine($"{Environment.NewLine}[0] - EXIT");
 
             choice = userInput.PickItemFromList(GladiatorList);
 
-            Gladiator gladiator = GladiatorList[choice - 1];
-
-            return gladiator;
+            if(choice > 0)
+            {
+                Gladiator gladiator = GladiatorList[choice - 1];
+                return gladiator;
+            }
+            else
+            {
+                Gladiator nullGlad = null;
+                return nullGlad;
+            }
+            
         }
+
 
         //-----
     }

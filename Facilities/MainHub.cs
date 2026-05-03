@@ -63,8 +63,7 @@ namespace Gladiator_Manager.Facilities
                         break;
 
                 case 6:
-                    player.DisplayGladiatorList();
-                    Console.ReadKey();
+                    player.ViewGladiatorInList(userInput);
                     break;
 
                 case 7:

@@ -30,26 +30,38 @@ namespace Gladiator_Manager.Tourneys
         {
             if(CompetingGladiators != null)
             {
+                int count = 1;
                 Console.Clear();
                 Console.WriteLine();
 
                 foreach(Gladiator glad in CompetingGladiators)
                 {
-                    Console.WriteLine($"{glad.Name}  -  {glad.Rating}");
+                    Console.WriteLine($"{count}: {glad.Name}  -  {glad.Rating}");
+                    count++;
                 }
                 Console.ReadKey();
             }
         }
 
-        public void FillCompetingList(Player player, GladiatorCreator gladiatorCreator, UserInput userInput)
+        public bool FillCompetingList(Player player, GladiatorCreator gladiatorCreator, UserInput userInput)
         {
             CompetingGladiators.Clear();
-            CompetingGladiators.Add(player.PickGladiatorFromList(userInput));
+            Gladiator playerGlad = player.PickGladiatorFromList(userInput);
 
-            for(int i = 1; i < ListSize; i++)
+            if (playerGlad != null)
             {
-                Gladiator gladiator = gladiatorCreator.CreateRandomGladiator();
-                CompetingGladiators.Add(gladiator);
+                CompetingGladiators.Add(playerGlad);
+
+                for (int i = 1; i < ListSize; i++)
+                {
+                    Gladiator gladiator = gladiatorCreator.CreateRandomGladiator();
+                    CompetingGladiators.Add(gladiator);
+                }
+                return true;
+            }
+            else
+            {
+                return false;
             }
 
         }
@@ -67,8 +79,8 @@ namespace Gladiator_Manager.Tourneys
             {
                 Console.Clear();
                 CompetingGladiators.Remove(StartTourneyBattle(CompetingGladiators[i], CompetingGladiators[i + 1], battleHandler, timer));
-                Console.WriteLine($"{CompetingGladiators[i].Name} won the round");
-                //Console.ReadKey();  
+                Console.WriteLine($"{Environment.NewLine} {CompetingGladiators[i].Name} won the round");
+                Console.ReadKey();  
             }
             //return roundWinners;
         }
@@ -80,13 +92,17 @@ namespace Gladiator_Manager.Tourneys
             do
             {
                 RunTourneyRound(battleHandler, timer);
+                Console.Clear();
+                Console.WriteLine();
                 Console.WriteLine($"End of round {roundCount}");
+                Console.ReadKey();
                 roundCount++;
             } while (CompetingGladiators.Count > 1);
 
+            Console.Clear();
             Console.WriteLine();
             Console.WriteLine($"{CompetingGladiators[0].Name} wins the tournament");
-            Console.ReadKey();
+            //Console.ReadKey();
         }
 
         //public List<Gladiator> RunTourneyRound(BattleHandler battleHandler)

@@ -66,6 +66,21 @@ namespace Gladiator_Manager.Gladiators
             {
                 int damage = ((2 * lvl + 2) / 5) * basePower * attackingGladiator.Attack / Defence / 50 + 2;
                 _health -= damage;
+
+                Console.WriteLine();
+                //Console.WriteLine($"{attackingGladiator.Name} hit {Name} for {damage} damage");
+                Console.ForegroundColor = ConsoleColor.DarkYellow;
+                Console.Write($"{attackingGladiator.Name} ");
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.Write("hit ");
+                Console.ForegroundColor = ConsoleColor.DarkYellow;
+                Console.Write($"{Name} ");
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.Write("for ");
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.Write($"{damage} ");
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.WriteLine("damage");
             }
         }
     }

@@ -34,6 +34,8 @@ namespace Gladiator_Manager.Tourneys
             {
                 Console.WriteLine($"[{count}]  -  {cup.Name}");
             }
+
+            Console.WriteLine($"{Environment.NewLine}[0] - EXIT");
         }
 
         public void UnlockRank1Tourneys()
@@ -52,18 +54,24 @@ namespace Gladiator_Manager.Tourneys
         {
             DisplayRank1Tourneys();
             int choice = 99;
+            bool canStart = false;
 
             do
             {
                 choice = userInput.PickItemFromList(Rank1TourneyList);
 
-                if(choice > 0)
+                if (choice > 0)
                 {
-                    _rank1Tourneys[choice - 1].FillCompetingList(player, gladiatorCreator, userInput);
-                    _rank1Tourneys[choice - 1].StartTourney(battleHandler, timer);
+                    canStart = _rank1Tourneys[choice - 1].FillCompetingList(player, gladiatorCreator, userInput);
+                    if (canStart)
+                    {
+                        _rank1Tourneys[choice - 1].StartTourney(battleHandler, timer);
+                        //choice = 0;
+                    }
+
                 }
 
-            } while (choice != 0);
+            } while (choice != 0 || !canStart);
         }
 
     }

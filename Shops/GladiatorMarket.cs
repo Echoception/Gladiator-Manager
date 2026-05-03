@@ -50,7 +50,7 @@ namespace Gladiator_Manager.Shops
 
             foreach (var glad in GladiatorsForSale)
             {
-                Console.WriteLine($"{count} - {glad.Name} - {glad.Rating}");
+                Console.WriteLine($"[{count}] {glad.Name} - {glad.Rating}");
                 count++;
             }
 
