@@ -1,4 +1,5 @@
 ﻿using Gladiator_Manager.BattleSystem;
+using Gladiator_Manager.CustomTimer;
 using Gladiator_Manager.DateSystem;
 using Gladiator_Manager.Gladiators; //  <----    for Tod the gladiator in " Menu - case 2 "
 using Gladiator_Manager.Input;
@@ -21,16 +22,16 @@ namespace Gladiator_Manager.Facilities
         // Menu of options
 
         public void DisplayMainHub(Player player, GladiatorMarket gladiatorMarket, BattleHandler battleHandler, UserInput userInput, DateHandler dateHandler,
-            Accommodations accommodations, GladiatorCreator gladiatorCreator, MainMarket mainMarket, AllTourneys allTourneys)
+            Accommodations accommodations, GladiatorCreator gladiatorCreator, MainMarket mainMarket, AllTourneys allTourneys, Ctimer timer)
         {
             Console.WriteLine();
             dateHandler.DisplayDate();
             Console.WriteLine($"{Environment.NewLine}{Environment.NewLine}{Environment.NewLine}");
-            Menu(player, gladiatorMarket, battleHandler, userInput, dateHandler, accommodations, gladiatorCreator, mainMarket, allTourneys);
+            Menu(player, gladiatorMarket, battleHandler, userInput, dateHandler, accommodations, gladiatorCreator, mainMarket, allTourneys, timer);
         }
 
         public void Menu(Player player, GladiatorMarket gladiatorMarket, BattleHandler battleHandler, UserInput userInput, DateHandler dateHandler,
-            Accommodations accommodations, GladiatorCreator gladiatorCreator, MainMarket mainMarket, AllTourneys allTourneys)
+            Accommodations accommodations, GladiatorCreator gladiatorCreator, MainMarket mainMarket, AllTourneys allTourneys, Ctimer timer)
         { 
 
             Console.WriteLine("[1] - Go to the Market");
@@ -51,7 +52,7 @@ namespace Gladiator_Manager.Facilities
 
                     if(player.GladiatorList.Count > 0)
                     {
-                        allTourneys.PickRank1Tourney(userInput);
+                        allTourneys.PickRank1Tourney(userInput, battleHandler, player, gladiatorCreator, timer);
                     }
                     else
                     {
@@ -63,6 +64,7 @@ namespace Gladiator_Manager.Facilities
 
                 case 6:
                     player.DisplayGladiatorList();
+                    Console.ReadKey();
                     break;
 
                 case 7:

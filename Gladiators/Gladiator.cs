@@ -10,6 +10,11 @@ namespace Gladiator_Manager.Gladiators
     internal class Gladiator
     {
 
+        public Gladiator()
+        {
+            // create empty holder
+        }
+
         public Gladiator(string name, int health, int attack, int defence, int speed, int charisma)
         {
             Name = name;

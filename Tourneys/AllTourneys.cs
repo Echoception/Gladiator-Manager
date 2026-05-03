@@ -1,4 +1,8 @@
-﻿using Gladiator_Manager.Input;
+﻿using Gladiator_Manager.BattleSystem;
+using Gladiator_Manager.CustomTimer;
+using Gladiator_Manager.Input;
+using Gladiator_Manager.PlayerClass;
+using Gladiator_Manager.SystemCreators;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -44,7 +48,7 @@ namespace Gladiator_Manager.Tourneys
             _rank1Tourneys.Add(weekendWarriorCup);
         }
 
-        public void PickRank1Tourney(UserInput userInput)
+        public void PickRank1Tourney(UserInput userInput, BattleHandler battleHandler, Player player, GladiatorCreator gladiatorCreator, Ctimer timer)
         {
             DisplayRank1Tourneys();
             int choice = 99;
@@ -55,7 +59,8 @@ namespace Gladiator_Manager.Tourneys
 
                 if(choice > 0)
                 {
-                    Console.WriteLine(Rank1TourneyList[choice - 1].Name);
+                    _rank1Tourneys[choice - 1].FillCompetingList(player, gladiatorCreator, userInput);
+                    _rank1Tourneys[choice - 1].StartTourney(battleHandler, timer);
                 }
 
             } while (choice != 0);

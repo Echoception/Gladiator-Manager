@@ -1,4 +1,5 @@
 ﻿using Gladiator_Manager.BattleSystem;
+using Gladiator_Manager.CustomTimer;
 using Gladiator_Manager.DateSystem;
 using Gladiator_Manager.Facilities;
 using Gladiator_Manager.Gladiators;
@@ -27,16 +28,19 @@ UserInput userInput = new UserInput();
 
 Accommodations accommodations = new Accommodations();
 
+Ctimer timer = new Ctimer(2);
+
 AllTourneys allTourneys = new AllTourneys();
 allTourneys.UnlockRank1Tourneys();
 
+Gladiator sam = gladiatorCreator.CreateRandomGladiator();
+Gladiator bob = gladiatorCreator.CreateRandomGladiator();
 
-//dateHandler.DisplayDate();
-//dateHandler.AdvanceWeek();
-//dateHandler.DisplayDate();
+battleHandler.Battle(sam, bob, timer);
+
 
 while(true)
 {
-    mainHub.DisplayMainHub(player, gladiatorMarket, battleHandler, userInput, dateHandler, accommodations, gladiatorCreator, mainMarket, allTourneys);
+    mainHub.DisplayMainHub(player, gladiatorMarket, battleHandler, userInput, dateHandler, accommodations, gladiatorCreator, mainMarket, allTourneys, timer);
     Console.Clear();
 }

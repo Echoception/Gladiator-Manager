@@ -1,5 +1,6 @@
 ﻿using Gladiator_Manager.Facilities;
 using Gladiator_Manager.Gladiators;
+using Gladiator_Manager.Input;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -33,7 +34,7 @@ namespace Gladiator_Manager.PlayerClass
             {
                 Console.WriteLine($"{glad.Name}  -  {glad.Rating}");
             }
-            Console.ReadKey();
+            //Console.ReadKey();
         }
 
         public void AddGladiatorToRoster(Gladiator gladiator, Accommodations accommodations)
@@ -48,5 +49,23 @@ namespace Gladiator_Manager.PlayerClass
                 _gladiatorList.Add(gladiator);
             }
         }
+
+        public Gladiator PickGladiatorFromList(UserInput userInput)
+        {
+            int choice = 99;
+
+            Console.Clear();
+            Console.WriteLine();
+            Console.WriteLine($"Pick a gladiator: {Environment.NewLine}");
+            DisplayGladiatorList();
+
+            choice = userInput.PickItemFromList(GladiatorList);
+
+            Gladiator gladiator = GladiatorList[choice - 1];
+
+            return gladiator;
+        }
+
+        //-----
     }
 }

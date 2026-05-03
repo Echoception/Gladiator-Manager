@@ -1,4 +1,5 @@
-﻿using Gladiator_Manager.Gladiators;
+﻿using Gladiator_Manager.CustomTimer;
+using Gladiator_Manager.Gladiators;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,13 +13,14 @@ namespace Gladiator_Manager.BattleSystem
 
 
 
-        public void Battle(Gladiator glad1, Gladiator glad2)
+        public void Battle(Gladiator glad1, Gladiator glad2, Ctimer timer)
         {
             if(glad1 != null && glad2 != null)
             {
                 do
                 {
                     ShowHealthValues(glad1, glad2);
+                    timer.StartTimer();
 
                     if (glad1.Health > 0)
                     {
@@ -26,6 +28,7 @@ namespace Gladiator_Manager.BattleSystem
                     }
 
                     ShowHealthValues(glad1, glad2);
+                    timer.StartTimer();
 
                     if (glad2.Health > 0)
                     {
@@ -34,8 +37,10 @@ namespace Gladiator_Manager.BattleSystem
 
                 } while (glad1.Health > 0 && glad2.Health > 0);
 
+                ShowHealthValues(glad1, glad2);
                 Console.ReadKey();
             }
+
         }
 
         public void ShowHealthValues(Gladiator glad1, Gladiator glad2)
