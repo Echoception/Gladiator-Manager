@@ -20,5 +20,12 @@ namespace Gladiator_Manager.Facilities
         public int Rank => _rank;
 
         private int _slotsToGainOnRankUp = 3;
+
+
+        public void RankUp()
+        {
+            _rank += 1;
+        }
+
     }
 }

@@ -22,16 +22,16 @@ namespace Gladiator_Manager.Facilities
         // Menu of options
 
         public void DisplayMainHub(Player player, GladiatorMarket gladiatorMarket, BattleHandler battleHandler, UserInput userInput, DateHandler dateHandler,
-            Accommodations accommodations, GladiatorCreator gladiatorCreator, MainMarket mainMarket, AllTourneys allTourneys, Ctimer timer)
+            Accommodations accommodations, GladiatorCreator gladiatorCreator, MainMarket mainMarket, AllTourneys allTourneys, Ctimer timer, FacilityUpgrades facilityUpgrades)
         {
             Console.WriteLine();
             dateHandler.DisplayDate();
             Console.WriteLine($"{Environment.NewLine}{Environment.NewLine}{Environment.NewLine}");
-            Menu(player, gladiatorMarket, battleHandler, userInput, dateHandler, accommodations, gladiatorCreator, mainMarket, allTourneys, timer);
+            Menu(player, gladiatorMarket, battleHandler, userInput, dateHandler, accommodations, gladiatorCreator, mainMarket, allTourneys, timer, facilityUpgrades);
         }
 
         public void Menu(Player player, GladiatorMarket gladiatorMarket, BattleHandler battleHandler, UserInput userInput, DateHandler dateHandler,
-            Accommodations accommodations, GladiatorCreator gladiatorCreator, MainMarket mainMarket, AllTourneys allTourneys, Ctimer timer)
+            Accommodations accommodations, GladiatorCreator gladiatorCreator, MainMarket mainMarket, AllTourneys allTourneys, Ctimer timer, FacilityUpgrades facilityUpgrades)
         { 
 
             Console.WriteLine("[1] - Go to the Market");
@@ -45,7 +45,7 @@ namespace Gladiator_Manager.Facilities
             switch (choice)
             {
                 case 1:
-                    mainMarket.Menu(userInput, gladiatorMarket, player, accommodations);
+                    mainMarket.Menu(userInput, gladiatorMarket, player, accommodations, facilityUpgrades);
                     break;
 
                 case 2:

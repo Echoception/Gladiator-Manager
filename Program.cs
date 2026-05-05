@@ -18,6 +18,8 @@ gladiatorMarket.RandomiseGladiatorsForSale(gladiatorCreator);
 
 MainMarket mainMarket = new MainMarket();
 
+FacilityUpgrades facilityUpgrades = new();
+
 Player player = new Player();
 
 MainHub mainHub = new MainHub();
@@ -37,6 +39,6 @@ allTourneys.UnlockRank1Tourneys();
 
 while(true)
 {
-    mainHub.DisplayMainHub(player, gladiatorMarket, battleHandler, userInput, dateHandler, accommodations, gladiatorCreator, mainMarket, allTourneys, timer);
+    mainHub.DisplayMainHub(player, gladiatorMarket, battleHandler, userInput, dateHandler, accommodations, gladiatorCreator, mainMarket, allTourneys, timer, facilityUpgrades);
     Console.Clear();
 }

@@ -78,8 +78,7 @@ namespace Gladiator_Manager.Shops
                         break;
 
                     case 2:
-                        Console.WriteLine("Not implimented");
-                        Console.ReadKey();
+                        SellGladiators(player, userInput);
                         break;
 
                     case 0:
@@ -113,8 +112,16 @@ namespace Gladiator_Manager.Shops
 
                     if(buy)
                     {
-                        player.AddGladiatorToRoster(GladiatorsForSale[choice - 1], accommodations);
-                        _gladiatorsForSale.Remove(GladiatorsForSale[choice - 1]);
+                        if(player.GladiatorList.Count >= accommodations.AccommodationSize)
+                        {
+                            Console.WriteLine("You do not have enough space in your accommodations");
+                            Console.ReadKey();
+                        }
+                        else
+                        {
+                            player.AddGladiatorToRoster(GladiatorsForSale[choice - 1]);
+                            _gladiatorsForSale.Remove(GladiatorsForSale[choice - 1]);
+                        }
                     }
                 }
 
@@ -126,8 +133,42 @@ namespace Gladiator_Manager.Shops
             //Console.ReadKey();
         }
 
+        public void SellGladiators(Player player, UserInput userInput)
+        {
+            Console.Clear();
+
+            if (player.GladiatorList.Count > 0)
+            {
+                Console.WriteLine($"{Environment.NewLine}Pick a gladiator to sell: ");
+
+                player.DisplayGladiatorList();
+                int choice = userInput.PickItemFromList(player.GladiatorList);
+
+                if (choice > 0)
+                {
+                    Console.WriteLine($"{Environment.NewLine}Are you sure you want to sell {player.GladiatorList[choice - 1].Name}?");
+                    bool confirm = userInput.PickYesOrNo();
+
+                    if (confirm)
+                    {
+                        player.RemoveGladiatorFromList(choice - 1);
+                    }
+                    else
+                    {
+                        return;
+                    }
+
+                }
+            }
+            else
+            {
+                Console.WriteLine("You have no gladiators to sell");
+                Console.ReadKey();
+            }
 
 
 
+            //----
+        }
     }
 }

@@ -65,17 +65,14 @@ namespace Gladiator_Manager.PlayerClass
             } while (choice > 0);
         }
 
-        public void AddGladiatorToRoster(Gladiator gladiator, Accommodations accommodations)
+        public void AddGladiatorToRoster(Gladiator gladiator)
         {
-            if(GladiatorList.Count >= accommodations.AccommodationSize)
-            {
-                Console.WriteLine("You do not have enough space in your accommodations");
-                Console.ReadKey();
-            }
-            else
-            {
                 _gladiatorList.Add(gladiator);
-            }
+        }
+
+        public void RemoveGladiatorFromList(int index)
+        {
+            _gladiatorList.RemoveAt(index);
         }
 
         public Gladiator PickGladiatorFromList(UserInput userInput)

@@ -13,7 +13,7 @@ namespace Gladiator_Manager.Shops
     {
 
 
-        public void Menu(UserInput userInput, GladiatorMarket gladiatorMarket, Player player, Accommodations accommodations)
+        public void Menu(UserInput userInput, GladiatorMarket gladiatorMarket, Player player, Accommodations accommodations, FacilityUpgrades facilityUpgrades)
         {
             int choice = 99;
 
@@ -40,7 +40,7 @@ namespace Gladiator_Manager.Shops
                         break;
 
                     case 3:
-                        Console.WriteLine("Not Implimented");
+                        facilityUpgrades.Menu(userInput, accommodations);
                         break;
 
                     case 0:
