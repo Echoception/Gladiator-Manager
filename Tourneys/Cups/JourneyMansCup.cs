@@ -13,6 +13,7 @@ namespace Gladiator_Manager.Tourneys.Cups
             CompetingGladiators = new();
             ListSize = 8;
             Name = "Journeyman's Cup";
+            Completed = false;
         }
 
 

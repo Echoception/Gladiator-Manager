@@ -6,16 +6,15 @@ using System.Threading.Tasks;
 
 namespace Gladiator_Manager.Tourneys.Cups
 {
-    internal class WeekendWarriorCup : BasicTourney
+    internal class VeteransCup : BasicTourney
     {
-        public WeekendWarriorCup()
+        public VeteransCup()
         {
             CompetingGladiators = new();
-            ListSize = 4;
-            Name = "Weekend Warrior Cup";
+            ListSize = 16;
+            Name = "Veteran's Cup";
             Completed = false;
         }
-
 
 
     }

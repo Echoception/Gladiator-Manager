@@ -14,7 +14,7 @@ namespace Gladiator_Manager.Tourneys.TourneyRanks
     internal abstract class RankXTourney
     {
 
-        public void DisplayRank1Tourneys(List<BasicTourney> tourneyList)
+        public void DisplayRankXTourneys(List<BasicTourney> tourneyList)
         {
             int count = 1;
             Console.Clear();
@@ -28,9 +28,9 @@ namespace Gladiator_Manager.Tourneys.TourneyRanks
             Console.WriteLine($"{Environment.NewLine}[0] - EXIT");
         }
 
-        public void PickRank1Tourney(UserInput userInput, BattleHandler battleHandler, Player player, GladiatorCreator gladiatorCreator, Ctimer timer, List<BasicTourney> tourneyList)
+        public void PickRankXTourney(UserInput userInput, BattleHandler battleHandler, Player player, GladiatorCreator gladiatorCreator, Ctimer timer, List<BasicTourney> tourneyList)
         {
-            DisplayRank1Tourneys(tourneyList);
+            DisplayRankXTourneys(tourneyList);
             int choice = 99;
             bool canStart = false;
 
@@ -49,7 +49,7 @@ namespace Gladiator_Manager.Tourneys.TourneyRanks
 
                 }
 
-            } while (choice != 0 || !canStart);
+            } while (choice != 0 && !canStart);
         }
 
     }

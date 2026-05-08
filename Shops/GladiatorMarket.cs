@@ -33,12 +33,17 @@ namespace Gladiator_Manager.Shops
         public void RandomiseGladiatorsForSale(GladiatorCreator gladiatorCreator)
         {
             _gladiatorsForSale.Clear();
-
-            for(int i = 0; i < _listLength; i++)
+            Gladiator gladiator = new Gladiator("OP", 200, 100, 100, 100, 100);
+            for (int i = 0; i < _listLength; i++)
             {
-                Gladiator gladiator = gladiatorCreator.CreateRandomGladiator();
                 _gladiatorsForSale.Add(gladiator);
             }
+
+            //for(int i = 0; i < _listLength; i++)
+            //{
+            //    Gladiator gladiator = gladiatorCreator.CreateRandomGladiator();
+            //    _gladiatorsForSale.Add(gladiator);
+            //}
         }
 
         private void DisplayGladiatorsForSale()

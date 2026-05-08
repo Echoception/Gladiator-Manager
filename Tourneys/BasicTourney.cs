@@ -113,6 +113,7 @@ namespace Gladiator_Manager.Tourneys
             }
             Console.WriteLine($"{CompetingGladiators[0].Name} wins the tournament");
             Console.ForegroundColor = ConsoleColor.White;
+            Console.ReadKey();
         }
 
         //public List<Gladiator> RunTourneyRound(BattleHandler battleHandler)

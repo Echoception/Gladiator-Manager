@@ -53,7 +53,7 @@ namespace Gladiator_Manager.Facilities
 
                     if(player.GladiatorList.Count > 0)
                     {
-                        allTourneys.MainMenu(userInput, battleHandler, player, gladiatorCreator, timer, allTourneys.Rank1Tourneys);
+                        allTourneys.MainMenu(userInput, battleHandler, player, gladiatorCreator, timer);
                     }
                     else
                     {
