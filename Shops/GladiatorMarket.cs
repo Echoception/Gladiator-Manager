@@ -119,6 +119,7 @@ namespace Gladiator_Manager.Shops
                         }
                         else
                         {
+                            _gladiatorsForSale[choice - 1].IsPlayersTrue();
                             player.AddGladiatorToRoster(GladiatorsForSale[choice - 1]);
                             _gladiatorsForSale.Remove(GladiatorsForSale[choice - 1]);
                         }
@@ -142,6 +143,8 @@ namespace Gladiator_Manager.Shops
                 Console.WriteLine($"{Environment.NewLine}Pick a gladiator to sell: ");
 
                 player.DisplayGladiatorList();
+                Console.WriteLine();
+                Console.WriteLine("[0] - EXIT");
                 int choice = userInput.PickItemFromList(player.GladiatorList);
 
                 if (choice > 0)

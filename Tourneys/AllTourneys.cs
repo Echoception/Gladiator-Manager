@@ -3,6 +3,7 @@ using Gladiator_Manager.CustomTimer;
 using Gladiator_Manager.Input;
 using Gladiator_Manager.PlayerClass;
 using Gladiator_Manager.SystemCreators;
+using Gladiator_Manager.Tourneys.Cups;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,64 +16,71 @@ namespace Gladiator_Manager.Tourneys
     {
         public AllTourneys()
         {
-            _rank1Tourneys = new();
+            _rank1Tourneys = new Rank1Tourneys();
+
+            _rank2Unlocked = false;
         }
 
 
-        private List<BasicTourney> _rank1Tourneys { get; set; }
+        private Rank1Tourneys _rank1Tourneys { get; set; }
+        
+        private bool _rank2Unlocked { get; set; }
 
-        public List<BasicTourney> Rank1TourneyList => _rank1Tourneys;
+        public Rank1Tourneys Rank1Tourneys => _rank1Tourneys;
+
+        public bool Rank2Unlocked => _rank2Unlocked;
 
 
-        public void DisplayRank1Tourneys()
+        public void MainMenu(UserInput userInput, BattleHandler battleHandler, Player player, GladiatorCreator gladiatorCreator, Ctimer timer, Rank1Tourneys rank1Tourneys)
         {
-            int count = 1;
-            Console.Clear();
-            Console.WriteLine();
-
-            foreach(BasicTourney cup in _rank1Tourneys)
-            {
-                Console.WriteLine($"[{count}]  -  {cup.Name}");
-            }
-
-            Console.WriteLine($"{Environment.NewLine}[0] - EXIT");
-        }
-
-        public void UnlockRank1Tourneys()
-        {
-            FillRank1TourneyList();
-        }
-
-        private void FillRank1TourneyList()
-        {
-            WeekendWarriorCup weekendWarriorCup = new WeekendWarriorCup();
-
-            _rank1Tourneys.Add(weekendWarriorCup);
-        }
-
-        public void PickRank1Tourney(UserInput userInput, BattleHandler battleHandler, Player player, GladiatorCreator gladiatorCreator, Ctimer timer)
-        {
-            DisplayRank1Tourneys();
             int choice = 99;
-            bool canStart = false;
 
             do
             {
-                choice = userInput.PickItemFromList(Rank1TourneyList);
+                Console.Clear();
+                Console.WriteLine();
+                Console.WriteLine("[1] - Rank 1 Tournaments");
+                Console.WriteLine("[2] - Rank 2 Tournaments");
 
-                if (choice > 0)
+                Console.WriteLine("[0] - EXIT");
+
+                choice = userInput.PickValidInt();
+
+                switch(choice)
                 {
-                    canStart = _rank1Tourneys[choice - 1].FillCompetingList(player, gladiatorCreator, userInput);
-                    if (canStart)
-                    {
-                        _rank1Tourneys[choice - 1].StartTourney(battleHandler, timer);
-                        //choice = 0;
-                    }
+                    case 1:
+                        rank1Tourneys.PickRank1Tourney(userInput, battleHandler, player, gladiatorCreator, timer, rank1Tourneys.Rank1TourneyList);
+                        break;
 
+                    case 2:  //  if(rank2 !unloced && checkForUnlocked = true)  { add to eank2 list }
+                        break;
+
+                    case 3:
+                        break;
+
+                    case 0:
+                        return;
+
+                    default:
+                        userInput.DisplayPickValidOptionText();
+                        break;
                 }
 
-            } while (choice != 0 || !canStart);
+            } while (choice != 0);
+
         }
 
+        private bool CheckForRank2Unlocked()
+        {
+            bool result = _rank1Tourneys.Rank1TourneyList.All(x => x.Completed = true);
+            return result;
+        }
+
+        private void FillRank2List()
+        {
+
+        }
+
+        //-----
     }
 }

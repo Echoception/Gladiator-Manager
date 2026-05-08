@@ -20,7 +20,7 @@ namespace Gladiator_Manager.PlayerClass
         private int _rank { get; set; }
         // Inventory
         // Gold
-        // Trophies?
+        // Trophies?   -   use a dictionary
         // rank? - controls roster size?  if not use lvl / upgrade system
 
         public List<Gladiator> GladiatorList => _gladiatorList;

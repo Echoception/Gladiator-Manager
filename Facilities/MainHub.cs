@@ -36,6 +36,7 @@ namespace Gladiator_Manager.Facilities
 
             Console.WriteLine("[1] - Go to the Market");
             Console.WriteLine("[2] - Fight");
+            Console.WriteLine("[3] - Training Fields");
 
             Console.WriteLine("[6] - Display Gladiator roster");
             Console.WriteLine("[7] - Advance to next week");
@@ -52,7 +53,7 @@ namespace Gladiator_Manager.Facilities
 
                     if(player.GladiatorList.Count > 0)
                     {
-                        allTourneys.PickRank1Tourney(userInput, battleHandler, player, gladiatorCreator, timer);
+                        allTourneys.MainMenu(userInput, battleHandler, player, gladiatorCreator, timer, allTourneys.Rank1Tourneys);
                     }
                     else
                     {

@@ -33,7 +33,7 @@ Accommodations accommodations = new Accommodations();
 Ctimer timer = new Ctimer(1);
 
 AllTourneys allTourneys = new AllTourneys();
-allTourneys.UnlockRank1Tourneys();
+allTourneys.Rank1Tourneys.UnlockRank1Tourneys();
 
 
 

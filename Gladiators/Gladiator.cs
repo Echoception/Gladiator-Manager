@@ -13,6 +13,7 @@ namespace Gladiator_Manager.Gladiators
         public Gladiator()
         {
             // create empty holder
+            Name = "";
         }
 
         public Gladiator(string name, int health, int attack, int defence, int speed, int charisma)
@@ -36,6 +37,7 @@ namespace Gladiator_Manager.Gladiators
         public string Name { get; set; }
 
         private bool _usingFacilities = false;
+        private bool _isPlayers = false;
 
         public int MaxHealth => _maxHealth;
         public int Health => _health;
@@ -44,6 +46,7 @@ namespace Gladiator_Manager.Gladiators
         public int Speed => _speed;
         public int Charisma => _charisma;
         public int Rating => ((_maxHealth + (_attack * 2) + (_defence * 2) + (_speed * 2) + (_charisma* 2)) / 5);
+        public bool IsPlayers => _isPlayers;
 
         // going to need methods for take damage and fields for weapon and armour slots
 
@@ -83,5 +86,10 @@ namespace Gladiator_Manager.Gladiators
                 Console.WriteLine("damage");
             }
         }
+
+        public void IsPlayersTrue() { _isPlayers = true; }
+        public void IsPlayersFalse() { _isPlayers = false; }
+
+        //----
     }
 }

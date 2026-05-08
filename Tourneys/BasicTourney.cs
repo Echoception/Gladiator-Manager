@@ -18,12 +18,15 @@ namespace Gladiator_Manager.Tourneys
         {
             CompetingGladiators = new();
             ListSize = 0;
+            Name = "";
+            Completed = false;
         }
 
         public List<Gladiator> CompetingGladiators { get; set; }
 
         public int ListSize { get; set; }
         public string Name { get; set; }
+        public bool Completed { get; set; }
 
 
         public void DisplayCompetingGladiators()
@@ -66,23 +69,24 @@ namespace Gladiator_Manager.Tourneys
 
         }
 
-        //  add tourney battle stuff here, switch(listOfCompetingGladiators.count) 1: winner, 2: B, 4: B, 8: B, 16: B   might need two lists?
 
         private void RunTourneyRound(BattleHandler battleHandler, Ctimer timer)
         {
             DisplayCompetingGladiators();
-            //Console.ReadKey();
-            //List<Gladiator> roundWinners = new();
-            //Gladiator gladiatorHolder = new();
 
             for(int i = 0; i < CompetingGladiators.Count; i++)
             {
                 Console.Clear();
                 CompetingGladiators.Remove(StartTourneyBattle(CompetingGladiators[i], CompetingGladiators[i + 1], battleHandler, timer));
+
+                if (CompetingGladiators[i].IsPlayers)   //  Better formatting for the user end
+                {
+                    Console.ForegroundColor = ConsoleColor.Green;
+                }
                 Console.WriteLine($"{Environment.NewLine} {CompetingGladiators[i].Name} won the round");
-                Console.ReadKey();  
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.ReadKey();
             }
-            //return roundWinners;
         }
 
         public void StartTourney(BattleHandler battleHandler, Ctimer timer)
@@ -101,8 +105,14 @@ namespace Gladiator_Manager.Tourneys
 
             Console.Clear();
             Console.WriteLine();
+
+            if (CompetingGladiators[0].IsPlayers)  //  Better formatting for the user end
+            {
+                Completed = true;
+                Console.ForegroundColor = ConsoleColor.Green;
+            }
             Console.WriteLine($"{CompetingGladiators[0].Name} wins the tournament");
-            //Console.ReadKey();
+            Console.ForegroundColor = ConsoleColor.White;
         }
 
         //public List<Gladiator> RunTourneyRound(BattleHandler battleHandler)

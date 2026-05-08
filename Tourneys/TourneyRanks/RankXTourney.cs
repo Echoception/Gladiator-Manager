@@ -1,0 +1,56 @@
+﻿using Gladiator_Manager.BattleSystem;
+using Gladiator_Manager.CustomTimer;
+using Gladiator_Manager.Input;
+using Gladiator_Manager.PlayerClass;
+using Gladiator_Manager.SystemCreators;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Gladiator_Manager.Tourneys.TourneyRanks
+{
+    internal abstract class RankXTourney
+    {
+
+        public void DisplayRank1Tourneys(List<BasicTourney> tourneyList)
+        {
+            int count = 1;
+            Console.Clear();
+            Console.WriteLine();
+
+            foreach (BasicTourney cup in tourneyList)
+            {
+                Console.WriteLine($"[{count}]  -  {cup.Name}");
+            }
+
+            Console.WriteLine($"{Environment.NewLine}[0] - EXIT");
+        }
+
+        public void PickRank1Tourney(UserInput userInput, BattleHandler battleHandler, Player player, GladiatorCreator gladiatorCreator, Ctimer timer, List<BasicTourney> tourneyList)
+        {
+            DisplayRank1Tourneys(tourneyList);
+            int choice = 99;
+            bool canStart = false;
+
+            do
+            {
+                choice = userInput.PickItemFromList(tourneyList);
+
+                if (choice > 0)
+                {
+                    canStart = tourneyList[choice - 1].FillCompetingList(player, gladiatorCreator, userInput);
+                    if (canStart)
+                    {
+                        tourneyList[choice - 1].StartTourney(battleHandler, timer);
+                        //choice = 0;
+                    }
+
+                }
+
+            } while (choice != 0 || !canStart);
+        }
+
+    }
+}

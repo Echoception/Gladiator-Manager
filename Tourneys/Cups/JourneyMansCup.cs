@@ -4,17 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Gladiator_Manager.Tourneys
+namespace Gladiator_Manager.Tourneys.Cups
 {
-    internal class WeekendWarriorCup : BasicTourney
+    internal class JourneyMansCup : BasicTourney
     {
-        public WeekendWarriorCup()
+        public JourneyMansCup()
         {
             CompetingGladiators = new();
-            ListSize = 4;
-            Name = "Weekend Warrior Cup";
+            ListSize = 8;
+            Name = "Journeyman's Cup";
         }
-
 
 
     }
