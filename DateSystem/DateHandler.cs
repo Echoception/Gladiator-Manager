@@ -20,12 +20,12 @@ namespace Gladiator_Manager.DateSystem
 
         public DateOnly CurrentGameDate => _currentGameDate;
 
-        private DateOnly _startingDate = new DateOnly(34, 1, 1); // Might not need this
+        private DateOnly _startingDate = new DateOnly(34, 1, 1);
 
 
         public void DisplayDate()
         {
-            Console.WriteLine($"{_currentGameDate.Day} of {Months[_currentGameDate.Month - 1]} in {_currentGameDate.Year}AD");
+            Console.WriteLine($"{_currentGameDate.Day} of {Months[_currentGameDate.Month - 1]} - {_currentGameDate.Year}AD");
         }
         
         public void AdvanceWeek(GladiatorMarket gladiatorMarket, GladiatorCreator gladiatorCreator)

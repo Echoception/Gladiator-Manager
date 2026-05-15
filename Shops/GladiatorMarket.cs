@@ -33,17 +33,17 @@ namespace Gladiator_Manager.Shops
         public void RandomiseGladiatorsForSale(GladiatorCreator gladiatorCreator)
         {
             _gladiatorsForSale.Clear();
-            Gladiator gladiator = new Gladiator("OP", 200, 100, 100, 100, 100);
-            for (int i = 0; i < _listLength; i++)
-            {
-                _gladiatorsForSale.Add(gladiator);
-            }
-
-            //for(int i = 0; i < _listLength; i++)
+            //Gladiator gladiator = new Gladiator("OP", 200, 100, 100, 100, 100);
+            //for (int i = 0; i < _listLength; i++)
             //{
-            //    Gladiator gladiator = gladiatorCreator.CreateRandomGladiator();
             //    _gladiatorsForSale.Add(gladiator);
             //}
+
+            for (int i = 0; i < _listLength; i++)
+            {
+                Gladiator gladiator = gladiatorCreator.CreateRandomGladiator();
+                _gladiatorsForSale.Add(gladiator);
+            }
         }
 
         private void DisplayGladiatorsForSale()
@@ -96,7 +96,7 @@ namespace Gladiator_Manager.Shops
             } while (choice != 0);
         }
 
-        public void BuyGladiators(Player player, UserInput userInput, Accommodations accommodations)
+        private void BuyGladiators(Player player, UserInput userInput, Accommodations accommodations)
         {
 
             DisplayGladiatorsForSale();
@@ -139,7 +139,7 @@ namespace Gladiator_Manager.Shops
             //Console.ReadKey();
         }
 
-        public void SellGladiators(Player player, UserInput userInput)
+        private void SellGladiators(Player player, UserInput userInput)
         {
             Console.Clear();
 

@@ -51,7 +51,7 @@ namespace Gladiator_Manager.Tourneys
             CompetingGladiators.Clear();
             Gladiator playerGlad = player.PickGladiatorFromList(userInput);
 
-            if (playerGlad != null)
+            if (playerGlad != null && !playerGlad.InFacilities)
             {
                 CompetingGladiators.Add(playerGlad);
 
@@ -64,6 +64,7 @@ namespace Gladiator_Manager.Tourneys
             }
             else
             {
+                Console.WriteLine($"{playerGlad.Name} is using facilities");
                 return false;
             }
 

@@ -12,7 +12,7 @@ namespace Gladiator_Manager.Shops
     {
 
 
-        public void Menu(UserInput userInput, Accommodations accommodations)
+        public void Menu(UserInput userInput, Accommodations accommodations, TrainingFields trainingFields)
         {
             int choice = 99;
 
@@ -22,6 +22,7 @@ namespace Gladiator_Manager.Shops
                 Console.Clear();
                 Console.WriteLine();
                 Console.WriteLine("[1] - Rank-Up Accommodations");
+                Console.WriteLine("[2] - Rank-Up TrainingFields");
 
                 Console.WriteLine("[0] - EXIT");
 
@@ -31,6 +32,10 @@ namespace Gladiator_Manager.Shops
                 {
                     case 1:
                         accommodations.RankUp();
+                        break;
+
+                        case 2:
+                        trainingFields.RankUp();
                         break;
 
                     case 0:

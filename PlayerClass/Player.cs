@@ -33,8 +33,13 @@ namespace Gladiator_Manager.PlayerClass
             Console.WriteLine();
             foreach(Gladiator glad in _gladiatorList)
             {
-                Console.WriteLine($"[{count}] {glad.Name}  -  {glad.Rating}");
+                Console.Write($"[{count}] {glad.Name} - Rating {glad.Rating}");
+                if(glad.InFacilities)
+                {
+                    Console.Write("    [ Using Facilities ]");
+                }
                 count++;
+                Console.WriteLine();
             }
             //Console.ReadKey();
         }

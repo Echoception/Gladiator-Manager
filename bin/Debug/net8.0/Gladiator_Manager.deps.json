@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Gladiator_Manager/1.0.0": {
+        "runtime": {
+          "Gladiator_Manager.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Gladiator_Manager/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

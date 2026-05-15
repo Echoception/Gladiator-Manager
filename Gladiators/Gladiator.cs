@@ -36,8 +36,10 @@ namespace Gladiator_Manager.Gladiators
 
         public string Name { get; set; }
 
+
         private bool _usingFacilities = false;
         private bool _isPlayers = false;
+        private bool _inFalilities = false;
 
         public int MaxHealth => _maxHealth;
         public int Health => _health;
@@ -47,6 +49,7 @@ namespace Gladiator_Manager.Gladiators
         public int Charisma => _charisma;
         public int Rating => ((_maxHealth + (_attack * 2) + (_defence * 2) + (_speed * 2) + (_charisma* 2)) / 5);
         public bool IsPlayers => _isPlayers;
+        public bool InFacilities => _inFalilities;
 
         // going to need methods for take damage and fields for weapon and armour slots
 
@@ -87,8 +90,10 @@ namespace Gladiator_Manager.Gladiators
             }
         }
 
-        public void IsPlayersTrue() { _isPlayers = true; }
-        public void IsPlayersFalse() { _isPlayers = false; }
+        public void IsPlayersTrue() => _isPlayers = true;
+        public void IsPlayersFalse() => _isPlayers = false;
+        public void PutInFacilities() => _inFalilities = true;
+        public void RemoveFromFacilities() => _inFalilities = false;
 
         //----
     }

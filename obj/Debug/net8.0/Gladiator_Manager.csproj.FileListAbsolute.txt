@@ -1,0 +1,15 @@
+F:\VisualStudio\CSharp\Gladiator_Manager\bin\Debug\net8.0\Gladiator_Manager.exe
+F:\VisualStudio\CSharp\Gladiator_Manager\bin\Debug\net8.0\Gladiator_Manager.deps.json
+F:\VisualStudio\CSharp\Gladiator_Manager\bin\Debug\net8.0\Gladiator_Manager.runtimeconfig.json
+F:\VisualStudio\CSharp\Gladiator_Manager\bin\Debug\net8.0\Gladiator_Manager.dll
+F:\VisualStudio\CSharp\Gladiator_Manager\bin\Debug\net8.0\Gladiator_Manager.pdb
+F:\VisualStudio\CSharp\Gladiator_Manager\obj\Debug\net8.0\Gladiator_Manager.GeneratedMSBuildEditorConfig.editorconfig
+F:\VisualStudio\CSharp\Gladiator_Manager\obj\Debug\net8.0\Gladiator_Manager.AssemblyInfoInputs.cache
+F:\VisualStudio\CSharp\Gladiator_Manager\obj\Debug\net8.0\Gladiator_Manager.AssemblyInfo.cs
+F:\VisualStudio\CSharp\Gladiator_Manager\obj\Debug\net8.0\Gladiator_Manager.csproj.CoreCompileInputs.cache
+F:\VisualStudio\CSharp\Gladiator_Manager\obj\Debug\net8.0\Gladiator_Manager.dll
+F:\VisualStudio\CSharp\Gladiator_Manager\obj\Debug\net8.0\refint\Gladiator_Manager.dll
+F:\VisualStudio\CSharp\Gladiator_Manager\obj\Debug\net8.0\Gladiator_Manager.pdb
+F:\VisualStudio\CSharp\Gladiator_Manager\obj\Debug\net8.0\Gladiator_Manager.genruntimeconfig.cache
+F:\VisualStudio\CSharp\Gladiator_Manager\obj\Debug\net8.0\ref\Gladiator_Manager.dll
+F:\VisualStudio\CSharp\Gladiator_Manager\obj\Debug\net8.0\Gladiator_Manager.sourcelink.json

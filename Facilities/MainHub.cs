@@ -22,17 +22,19 @@ namespace Gladiator_Manager.Facilities
         // Menu of options
 
         public void DisplayMainHub(Player player, GladiatorMarket gladiatorMarket, BattleHandler battleHandler, UserInput userInput, DateHandler dateHandler,
-            Accommodations accommodations, GladiatorCreator gladiatorCreator, MainMarket mainMarket, AllTourneys allTourneys, Ctimer timer, FacilityUpgrades facilityUpgrades)
+            Accommodations accommodations, GladiatorCreator gladiatorCreator, MainMarket mainMarket, AllTourneys allTourneys, Ctimer timer, FacilityUpgrades facilityUpgrades,
+            TrainingFields trainingFields)
         {
             Console.WriteLine();
             dateHandler.DisplayDate();
             Console.WriteLine($"{Environment.NewLine}{Environment.NewLine}{Environment.NewLine}");
-            Menu(player, gladiatorMarket, battleHandler, userInput, dateHandler, accommodations, gladiatorCreator, mainMarket, allTourneys, timer, facilityUpgrades);
+            Menu(player, gladiatorMarket, battleHandler, userInput, dateHandler, accommodations, gladiatorCreator, mainMarket, allTourneys, timer, facilityUpgrades, trainingFields);
         }
 
         public void Menu(Player player, GladiatorMarket gladiatorMarket, BattleHandler battleHandler, UserInput userInput, DateHandler dateHandler,
-            Accommodations accommodations, GladiatorCreator gladiatorCreator, MainMarket mainMarket, AllTourneys allTourneys, Ctimer timer, FacilityUpgrades facilityUpgrades)
-        { 
+            Accommodations accommodations, GladiatorCreator gladiatorCreator, MainMarket mainMarket, AllTourneys allTourneys, Ctimer timer, FacilityUpgrades facilityUpgrades,
+            TrainingFields trainingFields)
+        {
 
             Console.WriteLine("[1] - Go to the Market");
             Console.WriteLine("[2] - Fight");
@@ -46,12 +48,12 @@ namespace Gladiator_Manager.Facilities
             switch (choice)
             {
                 case 1:
-                    mainMarket.Menu(userInput, gladiatorMarket, player, accommodations, facilityUpgrades);
+                    mainMarket.Menu(userInput, gladiatorMarket, player, accommodations, facilityUpgrades, trainingFields);
                     break;
 
                 case 2:
 
-                    if(player.GladiatorList.Count > 0)
+                    if (player.GladiatorList.Count > 0)
                     {
                         allTourneys.MainMenu(userInput, battleHandler, player, gladiatorCreator, timer);
                     }
@@ -61,7 +63,11 @@ namespace Gladiator_Manager.Facilities
                         Console.ReadKey();
                     }
 
-                        break;
+                    break;
+
+                case 3:
+                    trainingFields.Menu(userInput, player);
+                    break;
 
                 case 6:
                     player.ViewGladiatorInList(userInput);

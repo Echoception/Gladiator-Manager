@@ -39,6 +39,12 @@ namespace Gladiator_Manager.Tourneys
         public bool Rank2Unlocked => _rank2Unlocked;
         public bool Rank3Unlocked => _rank3Unlocked;
 
+        private bool CheckAvailableGladiators(Player player)
+        {
+            bool result = player.GladiatorList.All(x => x.InFacilities);
+            return result;
+        }
+
         public void MainMenu(UserInput userInput, BattleHandler battleHandler, Player player, GladiatorCreator gladiatorCreator, Ctimer timer)
         {
             int choice = 99;
@@ -58,6 +64,13 @@ namespace Gladiator_Manager.Tourneys
                 {
                     _rank3Tourneys.UnlockRank3Tourney();
                 }
+            }
+
+            if(CheckAvailableGladiators(player))
+            {
+                Console.WriteLine("You do not have the gladiators available to do that");
+                Console.ReadKey();
+                return;
             }
 
 
