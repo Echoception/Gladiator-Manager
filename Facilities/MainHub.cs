@@ -74,7 +74,7 @@ namespace Gladiator_Manager.Facilities
                     break;
 
                 case 7:
-                    dateHandler.AdvanceWeek(gladiatorMarket, gladiatorCreator);
+                    dateHandler.AdvanceWeek(gladiatorMarket, gladiatorCreator, trainingFields, player);
                     break;
 
                 default:

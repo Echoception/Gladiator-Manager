@@ -26,7 +26,6 @@ namespace Gladiator_Manager.Facilities
         public List<Gladiator> InFacilities => _inFacilities;
         public int[] StatChoice => _statChoice;
 
-        //  rank 1 = just add to list; Rank 2 = check if rank 2, if(index 0 == null = add)  (if index 1 == null && _rank == 2 = add) ect.
 
         private int PickStatToRaise(UserInput userInput, Gladiator gladiator)
         {
@@ -89,7 +88,7 @@ namespace Gladiator_Manager.Facilities
             {
                 statIndex = PickStatToRaise(userInput, gladiator);
 
-                if (statIndex != null && statIndex != 0)
+                if (statIndex != 0)
                 {
                     _statChoice[0] = statIndex;
                 }
@@ -105,7 +104,7 @@ namespace Gladiator_Manager.Facilities
             {
                 statIndex = PickStatToRaise(userInput, gladiator);
 
-                if (statIndex != null && statIndex != 0)
+                if (statIndex != 0)
                 {
                     _statChoice[1] = statIndex;
                 }
@@ -121,7 +120,7 @@ namespace Gladiator_Manager.Facilities
             {
                 statIndex = PickStatToRaise(userInput, gladiator);
 
-                if (statIndex != null && statIndex != 0)
+                if (statIndex != 0)
                 {
                     _statChoice[2] = statIndex;
                 }
@@ -183,10 +182,40 @@ namespace Gladiator_Manager.Facilities
             }
 
         }
+
+        private void RaiseGladiatorStats()
+        {
+            int index = 0;
+
+            foreach(Gladiator glad in _inFacilities)
+            {
+                switch(_statChoice[index])
+                {
+                    case 1:
+                        glad.RaiseMaxHp();
+                        break;
+                    case 2:
+                        glad.RaiseAttack();
+                        break;
+                    case 3:
+                        glad.RaiseDefence();
+                        break;
+                    case 4:
+                        glad.RaiseSpeed();
+                        break;
+                    case 5:
+                        glad.RaiseCharisma();
+                        break;
+                }
+                glad.RemoveFromFacilities();
+                index++;
+            }
+
+        }
         
         public void WeeklyClear()
         {
-            // Need to add stat gains
+            RaiseGladiatorStats();
             _inFacilities.Clear();
         }
 

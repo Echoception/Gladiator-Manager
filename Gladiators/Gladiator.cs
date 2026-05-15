@@ -42,7 +42,7 @@ namespace Gladiator_Manager.Gladiators
         private bool _inFalilities = false;
 
         public int MaxHealth => _maxHealth;
-        public int Health => _health;
+        public int Health => Math.Clamp(_health, 0, MaxHealth);
         public int Attack => _attack;
         public int Defence => _defence;
         public int Speed => _speed;
@@ -51,12 +51,12 @@ namespace Gladiator_Manager.Gladiators
         public bool IsPlayers => _isPlayers;
         public bool InFacilities => _inFalilities;
 
-        // going to need methods for take damage and fields for weapon and armour slots
+        // going to need fields for weapon and armour slots
 
         public void DisplayStats()
         {
             Console.WriteLine($"{Environment.NewLine}Name: {Name}  -  {Rating}");
-            Console.WriteLine($"Health: {Health}");
+            Console.WriteLine($"Health: {Health} / {MaxHealth}");
             Console.WriteLine($"Attack: {Attack}");
             Console.WriteLine($"Defence: {Defence}");
             Console.WriteLine($"Speed: {Speed}");
@@ -94,6 +94,14 @@ namespace Gladiator_Manager.Gladiators
         public void IsPlayersFalse() => _isPlayers = false;
         public void PutInFacilities() => _inFalilities = true;
         public void RemoveFromFacilities() => _inFalilities = false;
+
+        public void RaiseMaxHp() => _maxHealth += 2;
+        public void RaiseAttack() => _attack++;
+        public void RaiseDefence() => _defence++;
+        public void RaiseSpeed() => _speed++;
+        public void RaiseCharisma() => _charisma++;
+        public void WeeklyHeal() => _health += 20;
+
 
         //----
     }

@@ -105,6 +105,14 @@ namespace Gladiator_Manager.PlayerClass
             
         }
 
+        public void WeeklyHeal()
+        {
+            foreach(Gladiator glad in _gladiatorList)
+            {
+                glad.WeeklyHeal();
+            }
+        }
+
 
         //-----
     }
