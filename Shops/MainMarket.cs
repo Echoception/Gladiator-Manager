@@ -22,6 +22,8 @@ namespace Gladiator_Manager.Shops
             {
                 Console.Clear();
                 Console.WriteLine();
+                player.DisplayGold();
+                Console.WriteLine();
 
                 Console.WriteLine("[1] - Gladiator Market");
                 Console.WriteLine("[2] - Item Market");

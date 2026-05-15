@@ -48,6 +48,8 @@ namespace Gladiator_Manager.Gladiators
         public int Speed => _speed;
         public int Charisma => _charisma;
         public int Rating => ((_maxHealth + (_attack * 2) + (_defence * 2) + (_speed * 2) + (_charisma* 2)) / 5);
+        public int BuyPrice => Rating * 3; //  could change to 4 ????
+        public int SalePrice => Rating * 2;
         public bool IsPlayers => _isPlayers;
         public bool InFacilities => _inFalilities;
 
@@ -100,8 +102,21 @@ namespace Gladiator_Manager.Gladiators
         public void RaiseDefence() => _defence++;
         public void RaiseSpeed() => _speed++;
         public void RaiseCharisma() => _charisma++;
-        public void WeeklyHeal() => _health += 20;
+        public void WeeklyHeal() => _health = Math.Clamp(_health += 20, 0, MaxHealth);
 
+        public void DisplayBuyPrice()
+        {
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
+            Console.Write($"{BuyPrice} gold");
+            Console.ForegroundColor = ConsoleColor.White;
+        }
+
+        public void DisplaySalePrice()
+        {
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
+            Console.Write($"{SalePrice} gold");
+            Console.ForegroundColor = ConsoleColor.White;
+        }
 
         //----
     }

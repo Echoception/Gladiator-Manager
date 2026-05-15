@@ -46,16 +46,22 @@ namespace Gladiator_Manager.Shops
             }
         }
 
-        private void DisplayGladiatorsForSale()
+        private void DisplayGladiatorsForSale(Player player)
         {
             int count = 1;
 
             Console.Clear();
+            Console.WriteLine();
+            player.DisplayGold();
+
             Console.WriteLine($"{Environment.NewLine}Pick a gladiator to view: {Environment.NewLine}");
 
             foreach (var glad in GladiatorsForSale)
             {
-                Console.WriteLine($"[{count}] {glad.Name} - {glad.Rating}");
+                Console.Write($"[{count}] {glad.Name} - Rating {glad.Rating} - Price:  ");
+                glad.DisplayBuyPrice();
+                Console.WriteLine();
+
                 count++;
             }
 
@@ -68,6 +74,8 @@ namespace Gladiator_Manager.Shops
             do
             {
                 Console.Clear();
+                Console.WriteLine();
+                player.DisplayGold();
 
                 Console.WriteLine($"{Environment.NewLine}Would you like to buy or sell: {Environment.NewLine}");
                 Console.WriteLine("[1] - Buy");
@@ -99,7 +107,7 @@ namespace Gladiator_Manager.Shops
         private void BuyGladiators(Player player, UserInput userInput, Accommodations accommodations)
         {
 
-            DisplayGladiatorsForSale();
+            DisplayGladiatorsForSale(player);
  
             int choice = 99;
 
@@ -111,11 +119,16 @@ namespace Gladiator_Manager.Shops
                 if (choice > 0)
                 {
                     Console.Clear();
+                    Console.WriteLine();
+                    player.DisplayGold();
+
                     GladiatorsForSale[choice - 1].DisplayStats();
+                    GladiatorsForSale[choice - 1].DisplayBuyPrice();
+                    Console.WriteLine();
                     Console.WriteLine($"{Environment.NewLine}Would you like to buy this gladiator? {Environment.NewLine}");
                     bool buy = userInput.PickYesOrNo();
 
-                    if(buy)
+                    if(buy && player.Gold >= GladiatorsForSale[choice - 1].BuyPrice)
                     {
                         if(player.GladiatorList.Count >= accommodations.AccommodationSize)
                         {
@@ -124,19 +137,26 @@ namespace Gladiator_Manager.Shops
                         }
                         else
                         {
+                            player.RemoveGold(GladiatorsForSale[choice - 1].BuyPrice);
                             _gladiatorsForSale[choice - 1].IsPlayersTrue();
                             player.AddGladiatorToRoster(GladiatorsForSale[choice - 1]);
                             _gladiatorsForSale.Remove(GladiatorsForSale[choice - 1]);
                         }
                     }
+                    else
+                    {
+                        if(choice == 0)
+                        {
+                            Console.WriteLine("You do not have enough gold");
+                            Console.ReadKey();
+                        }
+                    }
                 }
 
-                DisplayGladiatorsForSale();
+                DisplayGladiatorsForSale(player);
 
             } while (choice > 0);
 
-            //Console.WriteLine("EXITED");
-            //Console.ReadKey();
         }
 
         private void SellGladiators(Player player, UserInput userInput)
@@ -145,9 +165,25 @@ namespace Gladiator_Manager.Shops
 
             if (player.GladiatorList.Count > 0)
             {
-                Console.WriteLine($"{Environment.NewLine}Pick a gladiator to sell: ");
+                int count = 1;
+                Console.WriteLine();
+                player.DisplayGold();
+                
+                Console.WriteLine($"{Environment.NewLine}Pick a gladiator to sell: {Environment.NewLine}");
 
-                player.DisplayGladiatorList();
+                foreach(Gladiator glad in player.GladiatorList)
+                {
+                    Console.Write($"[{count}] {glad.Name} - Rating {glad.Rating} - Price:  ");
+                    glad.DisplaySalePrice();
+
+                    if (glad.InFacilities)
+                    {
+                        Console.Write("    [ Using Facilities ]");
+                    }
+                    Console.WriteLine();
+                    count++;
+                }
+
                 Console.WriteLine();
                 Console.WriteLine("[0] - EXIT");
                 int choice = userInput.PickItemFromList(player.GladiatorList);
@@ -159,6 +195,7 @@ namespace Gladiator_Manager.Shops
 
                     if (confirm)
                     {
+                        player.AddGold(player.GladiatorList[choice - 1].SalePrice);
                         player.RemoveGladiatorFromList(choice - 1);
                     }
                     else

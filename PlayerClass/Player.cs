@@ -14,18 +14,37 @@ namespace Gladiator_Manager.PlayerClass
         public Player()
         {
             _gladiatorList = new();
+            _gold = 500;
         }
 
         private List<Gladiator> _gladiatorList { get; set; }
         private int _rank { get; set; }
+        private int _gold { get; set; }
         // Inventory
-        // Gold
         // Trophies?   -   use a dictionary
         // rank? - controls roster size?  if not use lvl / upgrade system
 
         public List<Gladiator> GladiatorList => _gladiatorList;
         public int Rank => _rank;
+        public int Gold => _gold;
 
+
+        public void DisplayGold()
+        {
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
+            Console.WriteLine($"{Gold} gold");
+            Console.ForegroundColor = ConsoleColor.White;
+        }
+
+        public void RemoveGold(int goldToRemove)
+        {
+            _gold -= goldToRemove;
+        }
+
+        public void AddGold(int goldToAdd)
+        {
+            _gold += goldToAdd;
+        }
 
         public void DisplayGladiatorList()
         {
@@ -41,8 +60,8 @@ namespace Gladiator_Manager.PlayerClass
                 count++;
                 Console.WriteLine();
             }
-            //Console.ReadKey();
         }
+
 
         public void ViewGladiatorInList(UserInput userInput)
         {

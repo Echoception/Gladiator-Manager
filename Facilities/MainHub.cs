@@ -26,6 +26,8 @@ namespace Gladiator_Manager.Facilities
             TrainingFields trainingFields)
         {
             Console.WriteLine();
+            player.DisplayGold();
+            Console.WriteLine();
             dateHandler.DisplayDate();
             Console.WriteLine($"{Environment.NewLine}{Environment.NewLine}{Environment.NewLine}");
             Menu(player, gladiatorMarket, battleHandler, userInput, dateHandler, accommodations, gladiatorCreator, mainMarket, allTourneys, timer, facilityUpgrades, trainingFields);

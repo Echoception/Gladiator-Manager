@@ -25,7 +25,7 @@ namespace Gladiator_Manager.BattleSystem
                     if (glad1.Health > 0)
                     {
                         glad2.TakeDamage(glad1);
-                        //timer.StartTimer();
+                        timer.StartTimer();
                     }
 
                     Console.Clear();
@@ -34,7 +34,7 @@ namespace Gladiator_Manager.BattleSystem
                     if (glad2.Health > 0)
                     {
                         glad1.TakeDamage(glad2);
-                        //timer.StartTimer();
+                        timer.StartTimer();
                     }
 
                 } while (glad1.Health > 0 && glad2.Health > 0);
