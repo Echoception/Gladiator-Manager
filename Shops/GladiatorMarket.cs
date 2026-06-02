@@ -33,17 +33,17 @@ namespace Gladiator_Manager.Shops
         public void RandomiseGladiatorsForSale(GladiatorCreator gladiatorCreator)
         {
             _gladiatorsForSale.Clear();
-            //Gladiator gladiator = new Gladiator("OP", 200, 100, 100, 100, 100);
-            //for (int i = 0; i < _listLength; i++)
-            //{
-            //    _gladiatorsForSale.Add(gladiator);
-            //}
-
+            Gladiator gladiator = new Gladiator("OP", 200, 100, 100, 100, 100);
             for (int i = 0; i < _listLength; i++)
             {
-                Gladiator gladiator = gladiatorCreator.CreateRandomGladiator();
                 _gladiatorsForSale.Add(gladiator);
             }
+
+            //for (int i = 0; i < _listLength; i++)
+            //{
+            //    Gladiator gladiator = gladiatorCreator.CreateRandomGladiator();
+            //    _gladiatorsForSale.Add(gladiator);
+            //}
         }
 
         private void DisplayGladiatorsForSale(Player player)
@@ -58,7 +58,7 @@ namespace Gladiator_Manager.Shops
 
             foreach (var glad in GladiatorsForSale)
             {
-                Console.Write($"[{count}] {glad.Name} - Rating {glad.Rating} - Price:  ");
+                Console.Write($"[{count}] {glad.Name} - Rating: {glad.Rating} - Price:  ");
                 glad.DisplayBuyPrice();
                 Console.WriteLine();
 

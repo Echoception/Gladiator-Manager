@@ -57,7 +57,7 @@ namespace Gladiator_Manager.Gladiators
 
         public void DisplayStats()
         {
-            Console.WriteLine($"{Environment.NewLine}Name: {Name}  -  {Rating}");
+            Console.WriteLine($"{Environment.NewLine}Name: {Name}  -  Rating {Rating}");
             Console.WriteLine($"Health: {Health} / {MaxHealth}");
             Console.WriteLine($"Attack: {Attack}");
             Console.WriteLine($"Defence: {Defence}");

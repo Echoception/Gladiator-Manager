@@ -107,7 +107,7 @@ namespace Gladiator_Manager.Tourneys
 
                     case 3:
 
-                        if(Rank2Unlocked)
+                        if(Rank3Unlocked)
                         {
                             _rank3Tourneys.PickRankXTourney(userInput, battleHandler, player, gladiatorCreator, timer, _rank3Tourneys.Rank3TourneyList);
                         }
@@ -140,8 +140,15 @@ namespace Gladiator_Manager.Tourneys
 
         private bool CheckForRank3Unlocked()
         {
-            bool result = _rank2Tourneys.Rank2TourneyList.All(x => x.Completed);
-            return result;
+            if (_rank2Tourneys.Rank2TourneyList.Count > 0)
+            {
+                bool result = _rank2Tourneys.Rank2TourneyList.All(x => x.Completed);
+                return result;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         //-----

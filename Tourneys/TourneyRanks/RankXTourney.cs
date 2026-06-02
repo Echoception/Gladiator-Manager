@@ -1,5 +1,6 @@
 ﻿using Gladiator_Manager.BattleSystem;
 using Gladiator_Manager.CustomTimer;
+using Gladiator_Manager.Gladiators;
 using Gladiator_Manager.Input;
 using Gladiator_Manager.PlayerClass;
 using Gladiator_Manager.SystemCreators;
@@ -40,12 +41,27 @@ namespace Gladiator_Manager.Tourneys.TourneyRanks
 
                 if (choice > 0)
                 {
-                    canStart = tourneyList[choice - 1].FillCompetingList(player, gladiatorCreator, userInput);
-                    if (canStart)
+                    Gladiator playerGladiator = player.PickGladiatorFromList(userInput);
+                    if(playerGladiator != null)
                     {
-                        tourneyList[choice - 1].StartTourney(battleHandler, timer);
-                        //choice = 0;
+                        canStart = tourneyList[choice - 1].FillCompetingList(playerGladiator, gladiatorCreator, userInput);
+                        if (canStart)
+                        {
+                            tourneyList[choice - 1].StartTourney(battleHandler, timer);
+                            //choice = 0;
+                        }
                     }
+                    else
+                    {
+                        return;
+                    }
+
+                    //canStart = tourneyList[choice - 1].FillCompetingList(playerGladiator, gladiatorCreator, userInput);
+                    //if (canStart)
+                    //{
+                    //    tourneyList[choice - 1].StartTourney(battleHandler, timer);
+                    //    //choice = 0;
+                    //}
 
                 }
 

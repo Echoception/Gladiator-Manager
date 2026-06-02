@@ -14,7 +14,7 @@ namespace Gladiator_Manager.PlayerClass
         public Player()
         {
             _gladiatorList = new();
-            _gold = 500;
+            _gold = 600; // default 500?
         }
 
         private List<Gladiator> _gladiatorList { get; set; }

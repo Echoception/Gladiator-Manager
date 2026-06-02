@@ -46,10 +46,9 @@ namespace Gladiator_Manager.Tourneys
             }
         }
 
-        public bool FillCompetingList(Player player, GladiatorCreator gladiatorCreator, UserInput userInput)
+        public bool FillCompetingList(Gladiator playerGlad, GladiatorCreator gladiatorCreator, UserInput userInput)
         {
             CompetingGladiators.Clear();
-            Gladiator playerGlad = player.PickGladiatorFromList(userInput);
 
             if (playerGlad != null && !playerGlad.InFacilities)
             {
@@ -71,6 +70,17 @@ namespace Gladiator_Manager.Tourneys
         }
 
 
+        /*  *below* RunTourneyRound(...)
+         *  Removes the losing gladiator from the tourney list
+         *  if fights are [index] vs [index + 1] and the loser is removed, all competitors index's shift down
+         *  so when the loop increments the index's should line up again to do [index] vs [index + 1]
+         *  eg. [o] vs [1] - 0 loses : [1] becomes [0], [2] becomes [1], [3] becomes [2], loop++
+         *      [1] vs [2] - 1 loses : [2] becomes [1], [3] becomes [2], [4] becomes [3], loop++  ect.
+         *      if only one list in the list then they win
+         *      
+         *      should work with any single elimination tourney
+         *      competitor amounts: 2, 4, 8, 16, 32, 64 ect.
+         */
         private void RunTourneyRound(BattleHandler battleHandler, Ctimer timer)
         {
             DisplayCompetingGladiators();
@@ -84,7 +94,7 @@ namespace Gladiator_Manager.Tourneys
                 {
                     Console.ForegroundColor = ConsoleColor.Green;
                 }
-                Console.WriteLine($"{Environment.NewLine} {CompetingGladiators[i].Name} won the round");
+                Console.WriteLine($"{Environment.NewLine} {CompetingGladiators[i].Name} won the fight");
                 Console.ForegroundColor = ConsoleColor.White;
                 Console.ReadKey();
             }
