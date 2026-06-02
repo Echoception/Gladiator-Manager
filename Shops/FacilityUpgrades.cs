@@ -12,7 +12,7 @@ namespace Gladiator_Manager.Shops
     {
 
 
-        public void Menu(UserInput userInput, Accommodations accommodations, TrainingFields trainingFields)
+        public void Menu(UserInput userInput, Accommodations accommodations, TrainingFields trainingFields, Infirmary infirmary)
         {
             int choice = 99;
 
@@ -23,19 +23,24 @@ namespace Gladiator_Manager.Shops
                 Console.WriteLine();
                 Console.WriteLine("[1] - Rank-Up Accommodations");
                 Console.WriteLine("[2] - Rank-Up TrainingFields");
+                Console.WriteLine("[3] - Rank-Up Infirmary");
 
                 Console.WriteLine("[0] - EXIT");
 
                 choice = userInput.PickValidInt();
 
-                switch(choice)
+                switch (choice)
                 {
                     case 1:
                         accommodations.RankUp();
                         break;
 
-                        case 2:
+                    case 2:
                         trainingFields.RankUp();
+                        break;
+
+                    case 3:
+                        infirmary.RankUp();
                         break;
 
                     case 0:

@@ -30,6 +30,7 @@ UserInput userInput = new UserInput();
 
 Accommodations accommodations = new Accommodations();
 TrainingFields trainingFields = new TrainingFields();
+Infirmary infirmary = new Infirmary();
 
 Ctimer timer = new Ctimer(1);
 
@@ -41,6 +42,6 @@ allTourneys.Rank1Tourneys.UnlockRank1Tourneys();
 while(true)
 {
     mainHub.DisplayMainHub(player, gladiatorMarket, battleHandler, userInput, dateHandler, accommodations, gladiatorCreator, mainMarket, allTourneys, timer, facilityUpgrades,
-        trainingFields);
+        trainingFields, infirmary);
     Console.Clear();
 }

@@ -14,7 +14,7 @@ namespace Gladiator_Manager.Shops
 
 
         public void Menu(UserInput userInput, GladiatorMarket gladiatorMarket, Player player, Accommodations accommodations, FacilityUpgrades facilityUpgrades,
-            TrainingFields trainingFields)
+            TrainingFields trainingFields, Infirmary infirmary)
         {
             int choice = 99;
 
@@ -43,7 +43,7 @@ namespace Gladiator_Manager.Shops
                         break;
 
                     case 3:
-                        facilityUpgrades.Menu(userInput, accommodations, trainingFields);
+                        facilityUpgrades.Menu(userInput, accommodations, trainingFields, infirmary);
                         break;
 
                     case 0:

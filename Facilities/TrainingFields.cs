@@ -147,8 +147,6 @@ namespace Gladiator_Manager.Facilities
             Console.Clear();
             Console.WriteLine();
 
-            if (_inFacilities.Count > 0)
-            {
                 foreach (Gladiator glad in _inFacilities)
                 {
                     if (glad != null)
@@ -161,7 +159,6 @@ namespace Gladiator_Manager.Facilities
                         break;
                     }
                 }
-            }
         }
 
         private void RemoveGladiatorFromFacilities(UserInput userInput)

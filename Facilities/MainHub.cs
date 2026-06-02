@@ -23,24 +23,25 @@ namespace Gladiator_Manager.Facilities
 
         public void DisplayMainHub(Player player, GladiatorMarket gladiatorMarket, BattleHandler battleHandler, UserInput userInput, DateHandler dateHandler,
             Accommodations accommodations, GladiatorCreator gladiatorCreator, MainMarket mainMarket, AllTourneys allTourneys, Ctimer timer, FacilityUpgrades facilityUpgrades,
-            TrainingFields trainingFields)
+            TrainingFields trainingFields, Infirmary infirmary)
         {
             Console.WriteLine();
             player.DisplayGold();
             Console.WriteLine();
             dateHandler.DisplayDate();
             Console.WriteLine($"{Environment.NewLine}{Environment.NewLine}{Environment.NewLine}");
-            Menu(player, gladiatorMarket, battleHandler, userInput, dateHandler, accommodations, gladiatorCreator, mainMarket, allTourneys, timer, facilityUpgrades, trainingFields);
+            Menu(player, gladiatorMarket, battleHandler, userInput, dateHandler, accommodations, gladiatorCreator, mainMarket, allTourneys, timer, facilityUpgrades, trainingFields, infirmary);
         }
 
         public void Menu(Player player, GladiatorMarket gladiatorMarket, BattleHandler battleHandler, UserInput userInput, DateHandler dateHandler,
             Accommodations accommodations, GladiatorCreator gladiatorCreator, MainMarket mainMarket, AllTourneys allTourneys, Ctimer timer, FacilityUpgrades facilityUpgrades,
-            TrainingFields trainingFields)
+            TrainingFields trainingFields, Infirmary infirmary)
         {
 
             Console.WriteLine("[1] - Go to the Market");
             Console.WriteLine("[2] - Fight");
             Console.WriteLine("[3] - Training Fields");
+            Console.WriteLine("[4] - Infirmary");
 
             Console.WriteLine("[6] - Display Gladiator roster");
             Console.WriteLine("[7] - Advance to next week");
@@ -50,7 +51,7 @@ namespace Gladiator_Manager.Facilities
             switch (choice)
             {
                 case 1:
-                    mainMarket.Menu(userInput, gladiatorMarket, player, accommodations, facilityUpgrades, trainingFields);
+                    mainMarket.Menu(userInput, gladiatorMarket, player, accommodations, facilityUpgrades, trainingFields, infirmary);
                     break;
 
                 case 2:
@@ -71,12 +72,16 @@ namespace Gladiator_Manager.Facilities
                     trainingFields.Menu(userInput, player);
                     break;
 
+                case 4:
+                    infirmary.InfirmaryMenu(player, userInput);
+                    break;
+
                 case 6:
                     player.ViewGladiatorInList(userInput);
                     break;
 
                 case 7:
-                    dateHandler.AdvanceWeek(gladiatorMarket, gladiatorCreator, trainingFields, player);
+                    dateHandler.AdvanceWeek(gladiatorMarket, gladiatorCreator, trainingFields, player, infirmary);
                     break;
 
                 default:

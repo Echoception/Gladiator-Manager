@@ -73,7 +73,7 @@ namespace Gladiator_Manager.Gladiators
             if(attackingGladiator != null)
             {
                 int damage = ((2 * lvl + 2) / 5) * basePower * attackingGladiator.Attack / Defence / 50 + 2;
-                _health -= damage;
+                _health = Math.Clamp(_health -= damage, 0, MaxHealth);
 
                 Console.WriteLine();
                 //Console.WriteLine($"{attackingGladiator.Name} hit {Name} for {damage} damage");
@@ -103,6 +103,7 @@ namespace Gladiator_Manager.Gladiators
         public void RaiseSpeed() => _speed++;
         public void RaiseCharisma() => _charisma++;
         public void WeeklyHeal() => _health = Math.Clamp(_health += 20, 0, MaxHealth);
+        public void InfirmaryHeal(int heal) => _health = Math.Clamp(_health += heal, 0, MaxHealth);
 
         public void DisplayBuyPrice()
         {
