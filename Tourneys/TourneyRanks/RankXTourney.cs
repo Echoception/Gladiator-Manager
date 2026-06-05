@@ -47,7 +47,7 @@ namespace Gladiator_Manager.Tourneys.TourneyRanks
                         canStart = tourneyList[choice - 1].FillCompetingList(playerGladiator, gladiatorCreator, userInput);
                         if (canStart)
                         {
-                            tourneyList[choice - 1].StartTourney(battleHandler, timer);
+                            tourneyList[choice - 1].StartTourney(battleHandler, timer, player);
                             //choice = 0;
                         }
                     }

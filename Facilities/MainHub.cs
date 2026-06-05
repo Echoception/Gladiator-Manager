@@ -9,6 +9,7 @@ using Gladiator_Manager.SystemCreators;
 using Gladiator_Manager.Tourneys;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.Contracts;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -45,6 +46,7 @@ namespace Gladiator_Manager.Facilities
 
             Console.WriteLine("[6] - Display Gladiator roster");
             Console.WriteLine("[7] - Advance to next week");
+            Console.WriteLine("[9] - Show Trophies");
 
             int choice = userInput.PickValidInt();
 
@@ -83,6 +85,19 @@ namespace Gladiator_Manager.Facilities
                 case 7:
                     dateHandler.AdvanceWeek(gladiatorMarket, gladiatorCreator, trainingFields, player, infirmary);
                     break;
+
+                case 9:  //   move to inventory
+                    if(player.TrophyDictionary.Count > 0)
+                    {
+                        player.ShowTrophies();
+                        Console.ReadKey();
+                    }
+                    else
+                    {
+                        Console.WriteLine("You dont have any Trophies");
+                        Console.ReadKey();
+                    }
+                        break;
 
                 default:
                     Console.WriteLine("Pick an option from the menu");

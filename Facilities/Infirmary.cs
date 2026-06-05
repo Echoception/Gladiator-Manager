@@ -13,8 +13,8 @@ namespace Gladiator_Manager.Facilities
     {
         public Infirmary()
         {
-            _healAmount = 20;
             _rank = 1;
+            _healAmount = 20 * _rank;
             _usingInfirmary = new();
         }
 

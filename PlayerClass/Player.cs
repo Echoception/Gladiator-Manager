@@ -1,6 +1,7 @@
 ﻿using Gladiator_Manager.Facilities;
 using Gladiator_Manager.Gladiators;
 using Gladiator_Manager.Input;
+using Gladiator_Manager.Items.Trophies;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,10 +15,12 @@ namespace Gladiator_Manager.PlayerClass
         public Player()
         {
             _gladiatorList = new();
+            _trophyDictionary = new();
             _gold = 60000; // default 500?
         }
 
         private List<Gladiator> _gladiatorList { get; set; }
+        private Dictionary<BaseTrophy, int> _trophyDictionary { get; set; }
         private int _rank { get; set; }
         private int _gold { get; set; }
         // Inventory
@@ -25,6 +28,7 @@ namespace Gladiator_Manager.PlayerClass
         // rank? - controls roster size?  if not use lvl / upgrade system
 
         public List<Gladiator> GladiatorList => _gladiatorList;
+        public Dictionary<BaseTrophy, int> TrophyDictionary => _trophyDictionary;
         public int Rank => _rank;
         public int Gold => _gold;
 
@@ -124,6 +128,33 @@ namespace Gladiator_Manager.PlayerClass
             
         }
 
+        public void AddTrophy(BaseTrophy trophy)
+        {
+            if(TrophyDictionary.ContainsKey(trophy))
+            {
+                int newValue = 0;
+
+                _trophyDictionary.TryGetValue(trophy, out newValue);
+                _trophyDictionary[trophy] += 1;
+            }
+            else
+            {
+                _trophyDictionary.Add(trophy, 1);
+            }
+        }
+
+        public void ShowTrophies()
+        {
+            Console.Clear();
+            Console.WriteLine();
+
+            for(int i = 0; i < _trophyDictionary.Count; i++)
+            {
+                Console.WriteLine($"{_trophyDictionary.ElementAt(i).Key.Name} - x{_trophyDictionary.ElementAt(i).Value}");
+            }
+
+        }
+
         public void WeeklyHeal()
         {
             foreach(Gladiator glad in _gladiatorList)
@@ -131,7 +162,6 @@ namespace Gladiator_Manager.PlayerClass
                 glad.WeeklyHeal();
             }
         }
-
 
         //-----
     }

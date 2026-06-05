@@ -2,6 +2,7 @@
 using Gladiator_Manager.CustomTimer;
 using Gladiator_Manager.Gladiators;
 using Gladiator_Manager.Input;
+using Gladiator_Manager.Items.Trophies;
 using Gladiator_Manager.PlayerClass;
 using Gladiator_Manager.SystemCreators;
 using System;
@@ -22,7 +23,9 @@ namespace Gladiator_Manager.Tourneys
             Completed = false;
         }
 
+
         public List<Gladiator> CompetingGladiators { get; set; }
+        public BaseTrophy Trophy { get; set; }
 
         public int ListSize { get; set; }
         public string Name { get; set; }
@@ -100,7 +103,7 @@ namespace Gladiator_Manager.Tourneys
             }
         }
 
-        public void StartTourney(BattleHandler battleHandler, Ctimer timer)
+        public void StartTourney(BattleHandler battleHandler, Ctimer timer, Player player)
         {
             int roundCount = 1;
 
@@ -121,6 +124,8 @@ namespace Gladiator_Manager.Tourneys
             {
                 Completed = true;
                 Console.ForegroundColor = ConsoleColor.Green;
+                player.AddTrophy(Trophy);
+                Console.WriteLine($"You won the - {Trophy.Name} {Environment.NewLine}");
             }
             Console.WriteLine($"{CompetingGladiators[0].Name} wins the tournament");
             Console.ForegroundColor = ConsoleColor.White;
