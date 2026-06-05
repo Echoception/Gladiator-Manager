@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "F:\\VisualStudio\\CSharp\\Gladiator_Manager\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{82D47FDA-9666-4BE5-9596-0B1DFBEB8751}|Gladiator_Manager.csproj|f:\\visualstudio\\csharp\\gladiator_manager\\playerclass\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{82D47FDA-9666-4BE5-9596-0B1DFBEB8751}|Gladiator_Manager.csproj|solutionrelative:playerclass\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{82D47FDA-9666-4BE5-9596-0B1DFBEB8751}|Gladiator_Manager.csproj|f:\\visualstudio\\csharp\\gladiator_manager\\facilities\\mainhub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82D47FDA-9666-4BE5-9596-0B1DFBEB8751}|Gladiator_Manager.csproj|solutionrelative:facilities\\mainhub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82D47FDA-9666-4BE5-9596-0B1DFBEB8751}|Gladiator_Manager.csproj|f:\\visualstudio\\csharp\\gladiator_manager\\datesystem\\datehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82D47FDA-9666-4BE5-9596-0B1DFBEB8751}|Gladiator_Manager.csproj|solutionrelative:datesystem\\datehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{82D47FDA-9666-4BE5-9596-0B1DFBEB8751}|Gladiator_Manager.csproj|f:\\visualstudio\\csharp\\gladiator_manager\\tourneys\\tourneyranks\\rankxtourney.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -15,8 +19,12 @@
       "RelativeMoniker": "D:0:0:{82D47FDA-9666-4BE5-9596-0B1DFBEB8751}|Gladiator_Manager.csproj|solutionrelative:tourneys\\basictourney.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{82D47FDA-9666-4BE5-9596-0B1DFBEB8751}|Gladiator_Manager.csproj|f:\\visualstudio\\csharp\\gladiator_manager\\tourneys\\cups\\journeymanscup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{82D47FDA-9666-4BE5-9596-0B1DFBEB8751}|Gladiator_Manager.csproj|solutionrelative:tourneys\\cups\\journeymanscup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{82D47FDA-9666-4BE5-9596-0B1DFBEB8751}|Gladiator_Manager.csproj|f:\\visualstudio\\csharp\\gladiator_manager\\tourneys\\alltourneys.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82D47FDA-9666-4BE5-9596-0B1DFBEB8751}|Gladiator_Manager.csproj|solutionrelative:tourneys\\alltourneys.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82D47FDA-9666-4BE5-9596-0B1DFBEB8751}|Gladiator_Manager.csproj|f:\\visualstudio\\csharp\\gladiator_manager\\playerclass\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82D47FDA-9666-4BE5-9596-0B1DFBEB8751}|Gladiator_Manager.csproj|solutionrelative:playerclass\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{82D47FDA-9666-4BE5-9596-0B1DFBEB8751}|Gladiator_Manager.csproj|f:\\visualstudio\\csharp\\gladiator_manager\\tourneys\\cups\\veteranscup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -25,26 +33,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{82D47FDA-9666-4BE5-9596-0B1DFBEB8751}|Gladiator_Manager.csproj|f:\\visualstudio\\csharp\\gladiator_manager\\tourneys\\cups\\weekendwarriorcup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{82D47FDA-9666-4BE5-9596-0B1DFBEB8751}|Gladiator_Manager.csproj|solutionrelative:tourneys\\cups\\weekendwarriorcup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{82D47FDA-9666-4BE5-9596-0B1DFBEB8751}|Gladiator_Manager.csproj|f:\\visualstudio\\csharp\\gladiator_manager\\tourneys\\alltourneys.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{82D47FDA-9666-4BE5-9596-0B1DFBEB8751}|Gladiator_Manager.csproj|solutionrelative:tourneys\\alltourneys.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{82D47FDA-9666-4BE5-9596-0B1DFBEB8751}|Gladiator_Manager.csproj|f:\\visualstudio\\csharp\\gladiator_manager\\facilities\\mainhub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{82D47FDA-9666-4BE5-9596-0B1DFBEB8751}|Gladiator_Manager.csproj|solutionrelative:facilities\\mainhub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{82D47FDA-9666-4BE5-9596-0B1DFBEB8751}|Gladiator_Manager.csproj|f:\\visualstudio\\csharp\\gladiator_manager\\items\\trophies\\alltrophies.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{82D47FDA-9666-4BE5-9596-0B1DFBEB8751}|Gladiator_Manager.csproj|solutionrelative:items\\trophies\\alltrophies.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{82D47FDA-9666-4BE5-9596-0B1DFBEB8751}|Gladiator_Manager.csproj|f:\\visualstudio\\csharp\\gladiator_manager\\items\\trophies\\basetrophy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{82D47FDA-9666-4BE5-9596-0B1DFBEB8751}|Gladiator_Manager.csproj|solutionrelative:items\\trophies\\basetrophy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{82D47FDA-9666-4BE5-9596-0B1DFBEB8751}|Gladiator_Manager.csproj|f:\\visualstudio\\csharp\\gladiator_manager\\items\\baseitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{82D47FDA-9666-4BE5-9596-0B1DFBEB8751}|Gladiator_Manager.csproj|solutionrelative:items\\baseitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{82D47FDA-9666-4BE5-9596-0B1DFBEB8751}|Gladiator_Manager.csproj|f:\\visualstudio\\csharp\\gladiator_manager\\shops\\gladiatormarket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -70,7 +58,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 9,
               "Title": "Program.cs",
               "DocumentMoniker": "F:\\VisualStudio\\CSharp\\Gladiator_Manager\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -85,19 +73,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "DateHandler.cs",
+              "DocumentMoniker": "F:\\VisualStudio\\CSharp\\Gladiator_Manager\\DateSystem\\DateHandler.cs",
+              "RelativeDocumentMoniker": "DateSystem\\DateHandler.cs",
+              "ToolTip": "F:\\VisualStudio\\CSharp\\Gladiator_Manager\\DateSystem\\DateHandler.cs",
+              "RelativeToolTip": "DateSystem\\DateHandler.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAACQAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-05T10:39:10.68Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "RankXTourney.cs",
               "DocumentMoniker": "F:\\VisualStudio\\CSharp\\Gladiator_Manager\\Tourneys\\TourneyRanks\\RankXTourney.cs",
               "RelativeDocumentMoniker": "Tourneys\\TourneyRanks\\RankXTourney.cs",
               "ToolTip": "F:\\VisualStudio\\CSharp\\Gladiator_Manager\\Tourneys\\TourneyRanks\\RankXTourney.cs",
               "RelativeToolTip": "Tourneys\\TourneyRanks\\RankXTourney.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAewDEAAABdAAAAAAAAAA==",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAAC4AAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-05T10:17:51.312Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "VeteransCup.cs",
               "DocumentMoniker": "F:\\VisualStudio\\CSharp\\Gladiator_Manager\\Tourneys\\Cups\\VeteransCup.cs",
               "RelativeDocumentMoniker": "Tourneys\\Cups\\VeteransCup.cs",
@@ -110,7 +111,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "WeekendWarriorCup.cs",
               "DocumentMoniker": "F:\\VisualStudio\\CSharp\\Gladiator_Manager\\Tourneys\\Cups\\WeekendWarriorCup.cs",
               "RelativeDocumentMoniker": "Tourneys\\Cups\\WeekendWarriorCup.cs",
@@ -123,33 +124,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 4,
               "Title": "AllTourneys.cs",
               "DocumentMoniker": "F:\\VisualStudio\\CSharp\\Gladiator_Manager\\Tourneys\\AllTourneys.cs",
               "RelativeDocumentMoniker": "Tourneys\\AllTourneys.cs",
               "ToolTip": "F:\\VisualStudio\\CSharp\\Gladiator_Manager\\Tourneys\\AllTourneys.cs",
               "RelativeToolTip": "Tourneys\\AllTourneys.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAIIAAAAAAAAAAAAAAK0AAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-05T10:11:21.094Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "BasicTourney.cs",
               "DocumentMoniker": "F:\\VisualStudio\\CSharp\\Gladiator_Manager\\Tourneys\\BasicTourney.cs",
               "RelativeDocumentMoniker": "Tourneys\\BasicTourney.cs",
               "ToolTip": "F:\\VisualStudio\\CSharp\\Gladiator_Manager\\Tourneys\\BasicTourney.cs",
               "RelativeToolTip": "Tourneys\\BasicTourney.cs",
-              "ViewState": "AgIAAGIAAAAAAAAAAAAAAH8AAABYAAAAAAAAAA==",
+              "ViewState": "AgIAAG4AAAAAAAAAAAAAAIUAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-05T10:11:18.835Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 8,
               "Title": "GladiatorMarket.cs",
               "DocumentMoniker": "F:\\VisualStudio\\CSharp\\Gladiator_Manager\\Shops\\GladiatorMarket.cs",
               "RelativeDocumentMoniker": "Shops\\GladiatorMarket.cs",
@@ -162,72 +163,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "AllTrophies.cs",
-              "DocumentMoniker": "F:\\VisualStudio\\CSharp\\Gladiator_Manager\\Items\\Trophies\\AllTrophies.cs",
-              "RelativeDocumentMoniker": "Items\\Trophies\\AllTrophies.cs",
-              "ToolTip": "F:\\VisualStudio\\CSharp\\Gladiator_Manager\\Items\\Trophies\\AllTrophies.cs",
-              "RelativeToolTip": "Items\\Trophies\\AllTrophies.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T09:27:44.703Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "BaseTrophy.cs",
-              "DocumentMoniker": "F:\\VisualStudio\\CSharp\\Gladiator_Manager\\Items\\Trophies\\BaseTrophy.cs",
-              "RelativeDocumentMoniker": "Items\\Trophies\\BaseTrophy.cs",
-              "ToolTip": "F:\\VisualStudio\\CSharp\\Gladiator_Manager\\Items\\Trophies\\BaseTrophy.cs",
-              "RelativeToolTip": "Items\\Trophies\\BaseTrophy.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T09:26:59.885Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "BaseItem.cs",
-              "DocumentMoniker": "F:\\VisualStudio\\CSharp\\Gladiator_Manager\\Items\\BaseItem.cs",
-              "RelativeDocumentMoniker": "Items\\BaseItem.cs",
-              "ToolTip": "F:\\VisualStudio\\CSharp\\Gladiator_Manager\\Items\\BaseItem.cs",
-              "RelativeToolTip": "Items\\BaseItem.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T09:18:40.961Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "Player.cs",
               "DocumentMoniker": "F:\\VisualStudio\\CSharp\\Gladiator_Manager\\PlayerClass\\Player.cs",
               "RelativeDocumentMoniker": "PlayerClass\\Player.cs",
               "ToolTip": "F:\\VisualStudio\\CSharp\\Gladiator_Manager\\PlayerClass\\Player.cs",
               "RelativeToolTip": "PlayerClass\\Player.cs",
-              "ViewState": "AgIAAGgAAAAAAAAAAAAAAIQAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIgAAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-02T12:54:34.417Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "JourneyMansCup.cs",
-              "DocumentMoniker": "F:\\VisualStudio\\CSharp\\Gladiator_Manager\\Tourneys\\Cups\\JourneyMansCup.cs",
-              "RelativeDocumentMoniker": "Tourneys\\Cups\\JourneyMansCup.cs",
-              "ToolTip": "F:\\VisualStudio\\CSharp\\Gladiator_Manager\\Tourneys\\Cups\\JourneyMansCup.cs",
-              "RelativeToolTip": "Tourneys\\Cups\\JourneyMansCup.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAA5AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T10:15:27.635Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 10,
               "Title": "Gladiator.cs",
               "DocumentMoniker": "F:\\VisualStudio\\CSharp\\Gladiator_Manager\\Gladiators\\Gladiator.cs",
               "RelativeDocumentMoniker": "Gladiators\\Gladiator.cs",
@@ -239,13 +188,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 0,
               "Title": "MainHub.cs",
               "DocumentMoniker": "F:\\VisualStudio\\CSharp\\Gladiator_Manager\\Facilities\\MainHub.cs",
               "RelativeDocumentMoniker": "Facilities\\MainHub.cs",
               "ToolTip": "F:\\VisualStudio\\CSharp\\Gladiator_Manager\\Facilities\\MainHub.cs",
               "RelativeToolTip": "Facilities\\MainHub.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAAACgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADsAAAAAAAAAAAAewFUAAAB9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-08T17:38:38.579Z",
               "EditorCaption": ""

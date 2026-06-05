@@ -41,6 +41,13 @@ namespace Gladiator_Manager.Tourneys.TourneyRanks
 
                 if (choice > 0)
                 {
+                    if (tourneyList[choice - 1].CompletedThisWeek)
+                    {
+                        Console.WriteLine("You have already competed in this tournament this week");
+                        Console.ReadKey();
+                        return;
+                    }
+
                     Gladiator playerGladiator = player.PickGladiatorFromList(userInput);
                     if(playerGladiator != null)
                     {

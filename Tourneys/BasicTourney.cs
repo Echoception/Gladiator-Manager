@@ -21,6 +21,7 @@ namespace Gladiator_Manager.Tourneys
             ListSize = 0;
             Name = "";
             Completed = false;
+            CompletedThisWeek = false;
         }
 
 
@@ -30,6 +31,7 @@ namespace Gladiator_Manager.Tourneys
         public int ListSize { get; set; }
         public string Name { get; set; }
         public bool Completed { get; set; }
+        public bool CompletedThisWeek { get; set; }
 
 
         public void DisplayCompetingGladiators()
@@ -129,6 +131,7 @@ namespace Gladiator_Manager.Tourneys
             }
             Console.WriteLine($"{CompetingGladiators[0].Name} wins the tournament");
             Console.ForegroundColor = ConsoleColor.White;
+            CompletedThisWeek = true;
             Console.ReadKey();
         }
 

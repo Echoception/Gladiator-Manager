@@ -83,7 +83,7 @@ namespace Gladiator_Manager.Facilities
                     break;
 
                 case 7:
-                    dateHandler.AdvanceWeek(gladiatorMarket, gladiatorCreator, trainingFields, player, infirmary);
+                    dateHandler.AdvanceWeek(gladiatorMarket, gladiatorCreator, trainingFields, player, infirmary, allTourneys);
                     break;
 
                 case 9:  //   move to inventory

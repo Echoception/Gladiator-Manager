@@ -151,6 +151,31 @@ namespace Gladiator_Manager.Tourneys
             }
         }
 
+        //   Can only do each tourney once per week
+        public void WeeklyClear()
+        {
+            foreach(BasicTourney tourney in _rank1Tourneys.Rank1TourneyList)
+            {
+                tourney.CompletedThisWeek = false;
+            }
+
+            if(_rank2Tourneys.Rank2TourneyList.Count > 0)
+            {
+                foreach(BasicTourney tourney in _rank2Tourneys.Rank2TourneyList)
+                {
+                    tourney.CompletedThisWeek = false;
+                }
+            }
+
+            if(_rank3Tourneys.Rank3TourneyList.Count > 0)
+            {
+                foreach(BasicTourney tourney in _rank3Tourneys.Rank3TourneyList)
+                {
+                    tourney.CompletedThisWeek = false;
+                }
+            }
+        }
+
         //-----
     }
 }

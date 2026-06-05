@@ -2,6 +2,7 @@
 using Gladiator_Manager.PlayerClass;
 using Gladiator_Manager.Shops;
 using Gladiator_Manager.SystemCreators;
+using Gladiator_Manager.Tourneys;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,8 +31,10 @@ namespace Gladiator_Manager.DateSystem
             Console.WriteLine($"{_currentGameDate.Day} of {Months[_currentGameDate.Month - 1]} - {_currentGameDate.Year}AD");
         }
         
-        public void AdvanceWeek(GladiatorMarket gladiatorMarket, GladiatorCreator gladiatorCreator, TrainingFields trainingFields, Player player, Infirmary infirmary)
+        public void AdvanceWeek(GladiatorMarket gladiatorMarket, GladiatorCreator gladiatorCreator, TrainingFields trainingFields, Player player, Infirmary infirmary,
+                    AllTourneys allTourneys)
         {
+            allTourneys.WeeklyClear();
             infirmary.WeeklyClear();
             trainingFields.WeeklyClear();
             player.WeeklyHeal();
