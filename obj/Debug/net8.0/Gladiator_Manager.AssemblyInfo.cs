@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Gladiator_Manager")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f26590efbfb592cbd26db785e35c9db0644363d6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f26392912e1239b53cb655e40e825e5d30c47d62")]
 [assembly: System.Reflection.AssemblyProductAttribute("Gladiator_Manager")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Gladiator_Manager")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

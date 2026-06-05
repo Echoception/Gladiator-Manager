@@ -1,6 +1,7 @@
 ﻿using Gladiator_Manager.Facilities;
 using Gladiator_Manager.Gladiators;
 using Gladiator_Manager.Input;
+using Gladiator_Manager.Inventories;
 using Gladiator_Manager.Items.Trophies;
 using System;
 using System.Collections.Generic;
@@ -17,10 +18,12 @@ namespace Gladiator_Manager.PlayerClass
             _gladiatorList = new();
             _trophyDictionary = new();
             _gold = 60000; // default 500?
+            _inventory = new();
         }
 
         private List<Gladiator> _gladiatorList { get; set; }
         private Dictionary<BaseTrophy, int> _trophyDictionary { get; set; }
+        private PlayerInventory _inventory { get; set; }
         private int _rank { get; set; }
         private int _gold { get; set; }
         // Inventory
@@ -29,6 +32,7 @@ namespace Gladiator_Manager.PlayerClass
 
         public List<Gladiator> GladiatorList => _gladiatorList;
         public Dictionary<BaseTrophy, int> TrophyDictionary => _trophyDictionary;
+        public PlayerInventory Inventory => _inventory;
         public int Rank => _rank;
         public int Gold => _gold;
 

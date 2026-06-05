@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace Gladiator_Manager.Items.Trophies
 {
-    internal abstract class BaseTrophy : BaseItem
+    internal abstract class BaseTrophy
     {
         public BaseTrophy()
         {
             Name = "";
-            Price = 0;
         }
 
+        public string Name { get; set; }
     }
 }
