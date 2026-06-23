@@ -16,7 +16,7 @@ namespace Gladiator_Manager.Items.Equipment.Weapons
                 Name = "Bronze Dagger";
                 Price = 15;
                 Power = 5;
-                Weight = 2;
+                Weight = 3;
             }
         }
 
@@ -27,8 +27,31 @@ namespace Gladiator_Manager.Items.Equipment.Weapons
                 Name = "Bronze Sword";
                 Price = 20;
                 Power = 10;
-                Weight = 5;
+                Weight = 8;
             }
+
+            internal class BronzeAxe : BaseWeapon
+            {
+                public BronzeAxe()
+                {
+                    Name = "Bronze Axe";
+                    Price = 25;
+                    Power = 15;
+                    Weight = 11;
+                }
+            }
+
+            internal class BronzeMace : BaseWeapon
+            {
+                public BronzeMace()
+                {
+                    Name = "Bronze Mace";
+                    Price = 30;
+                    Power = 20;
+                    Weight = 16;
+                }
+            }
+
         }
 
         //-----

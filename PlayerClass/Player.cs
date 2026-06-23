@@ -26,8 +26,7 @@ namespace Gladiator_Manager.PlayerClass
         private PlayerInventory _inventory { get; set; }
         private int _rank { get; set; }
         private int _gold { get; set; }
-        // Inventory
-        // Trophies?   -   use a dictionary
+
         // rank? - controls roster size?  if not use lvl / upgrade system
 
         public List<Gladiator> GladiatorList => _gladiatorList;
@@ -132,7 +131,7 @@ namespace Gladiator_Manager.PlayerClass
             
         }
 
-        public void AddTrophy(BaseTrophy trophy)
+        public void AddTrophy(BaseTrophy trophy)  //   Add to inventory??
         {
             if(TrophyDictionary.ContainsKey(trophy))
             {
@@ -147,7 +146,7 @@ namespace Gladiator_Manager.PlayerClass
             }
         }
 
-        public void ShowTrophies()
+        public void ShowTrophies()    //   Add to inventory??
         {
             Console.Clear();
             Console.WriteLine();

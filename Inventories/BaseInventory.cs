@@ -26,7 +26,7 @@ namespace Gladiator_Manager.Inventories
 
             foreach(BaseItem item in ItemList)
             {
-                Console.WriteLine($"[1] - {item.Name}");
+                Console.WriteLine($"[{count}] - {item.Name}");
                 count++;
             }
 
