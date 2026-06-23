@@ -2,6 +2,7 @@
 using Gladiator_Manager.CustomTimer;
 using Gladiator_Manager.Gladiators;
 using Gladiator_Manager.Input;
+using Gladiator_Manager.Items;
 using Gladiator_Manager.Items.Trophies;
 using Gladiator_Manager.PlayerClass;
 using Gladiator_Manager.SystemCreators;
@@ -22,9 +23,11 @@ namespace Gladiator_Manager.Tourneys
             Name = "";
             Completed = false;
             CompletedThisWeek = false;
+            LootTable = new();
         }
 
 
+        public List<BaseItem> LootTable { get; set; }
         public List<Gladiator> CompetingGladiators { get; set; }
         public BaseTrophy Trophy { get; set; }
 
@@ -148,6 +151,8 @@ namespace Gladiator_Manager.Tourneys
                 Console.ForegroundColor = ConsoleColor.Green;
                 player.AddTrophy(Trophy);
                 Console.WriteLine($"You won the - {Trophy.Name} {Environment.NewLine}");
+                Console.ReadKey();
+                RollLootTable(player);
             }
             Console.WriteLine($"{CompetingGladiators[0].Name} wins the tournament");
             Console.ForegroundColor = ConsoleColor.White;
@@ -209,6 +214,17 @@ namespace Gladiator_Manager.Tourneys
             {
                 return glad1;
             }
+        }
+
+        private void RollLootTable(Player player)
+        {
+            Random roll = new Random();
+            int lootNumber = roll.Next(0, LootTable.Count);
+
+            Console.WriteLine($"You won: {LootTable[lootNumber].Name} {Environment.NewLine}");
+            Console.ReadKey();
+
+            player.Inventory.AddItem(LootTable[lootNumber]);
         }
 
         //---

@@ -43,7 +43,7 @@ namespace Gladiator_Manager.Facilities
             Console.WriteLine("[2] - Fight");
             Console.WriteLine("[3] - Training Fields");
             Console.WriteLine("[4] - Infirmary");
-
+            Console.WriteLine("[5] - View Inventory");
             Console.WriteLine("[6] - Display Gladiator roster");
             Console.WriteLine("[7] - Advance to next week");
             Console.WriteLine("[9] - Show Trophies");
@@ -77,6 +77,18 @@ namespace Gladiator_Manager.Facilities
                 case 4:
                     infirmary.InfirmaryMenu(player, userInput);
                     break;
+
+                case 5:
+                    if(player.Inventory.ItemList.Count > 0)
+                    {
+                        player.Inventory.DisplayItems();
+                    }
+                    else
+                    {
+                        Console.WriteLine("Your inventory is empty");
+                    }
+                    Console.ReadKey();
+                        break;
 
                 case 6:
                     player.ViewGladiatorInList(userInput);
