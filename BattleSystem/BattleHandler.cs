@@ -50,12 +50,31 @@ namespace Gladiator_Manager.BattleSystem
         {
             //Console.WriteLine($"{glad1.Name} - {glad1.Health} \t\t {glad2.Name} - {glad2.Health}");
             Console.WriteLine();
-            Console.ForegroundColor = ConsoleColor.DarkYellow;
-            Console.Write($"{glad1.Name} : ");
-            Console.ForegroundColor = ConsoleColor.Red;
+            
+            if(glad1.IsPlayers)
+            {
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.Write($"{glad1.Name} : ");
+            }
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.DarkYellow;
+                Console.Write($"{glad1.Name} : ");
+            }
+
+                Console.ForegroundColor = ConsoleColor.Red;
             Console.Write($"{glad1.Health} / {glad1.MaxHealth} HP\t\t");
-            Console.ForegroundColor = ConsoleColor.DarkYellow;
-            Console.Write($"{glad2.Name} : ");
+
+            if (glad2.IsPlayers)
+            {
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.Write($"{glad2.Name} : ");
+            }
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.DarkYellow;
+                Console.Write($"{glad2.Name} : ");
+            }
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine($"{glad2.Health} / {glad2.MaxHealth} HP");
             Console.ForegroundColor = ConsoleColor.White;

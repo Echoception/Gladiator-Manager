@@ -3,64 +3,60 @@
   "WorkspaceRootPath": "F:\\VisualStudio\\CSharp\\Gladiator_Manager\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{82D47FDA-9666-4BE5-9596-0B1DFBEB8751}|Gladiator_Manager.csproj|f:\\visualstudio\\csharp\\gladiator_manager\\tourneys\\basictourney.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82D47FDA-9666-4BE5-9596-0B1DFBEB8751}|Gladiator_Manager.csproj|solutionrelative:tourneys\\basictourney.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82D47FDA-9666-4BE5-9596-0B1DFBEB8751}|Gladiator_Manager.csproj|f:\\visualstudio\\csharp\\gladiator_manager\\tourneys\\tourneyranks\\rankxtourney.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82D47FDA-9666-4BE5-9596-0B1DFBEB8751}|Gladiator_Manager.csproj|solutionrelative:tourneys\\tourneyranks\\rankxtourney.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82D47FDA-9666-4BE5-9596-0B1DFBEB8751}|Gladiator_Manager.csproj|f:\\visualstudio\\csharp\\gladiator_manager\\battlesystem\\battlehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82D47FDA-9666-4BE5-9596-0B1DFBEB8751}|Gladiator_Manager.csproj|solutionrelative:battlesystem\\battlehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{82D47FDA-9666-4BE5-9596-0B1DFBEB8751}|Gladiator_Manager.csproj|f:\\visualstudio\\csharp\\gladiator_manager\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{82D47FDA-9666-4BE5-9596-0B1DFBEB8751}|Gladiator_Manager.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{82D47FDA-9666-4BE5-9596-0B1DFBEB8751}|Gladiator_Manager.csproj|f:\\visualstudio\\csharp\\gladiator_manager\\items\\equipment\\armour\\commonarmour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{82D47FDA-9666-4BE5-9596-0B1DFBEB8751}|Gladiator_Manager.csproj|solutionrelative:items\\equipment\\armour\\commonarmour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{82D47FDA-9666-4BE5-9596-0B1DFBEB8751}|Gladiator_Manager.csproj|f:\\visualstudio\\csharp\\gladiator_manager\\items\\equipment\\weapons\\bronzeweapons.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{82D47FDA-9666-4BE5-9596-0B1DFBEB8751}|Gladiator_Manager.csproj|solutionrelative:items\\equipment\\weapons\\bronzeweapons.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{82D47FDA-9666-4BE5-9596-0B1DFBEB8751}|Gladiator_Manager.csproj|f:\\visualstudio\\csharp\\gladiator_manager\\items\\equipment\\armour\\unarmoured.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{82D47FDA-9666-4BE5-9596-0B1DFBEB8751}|Gladiator_Manager.csproj|solutionrelative:items\\equipment\\armour\\unarmoured.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{82D47FDA-9666-4BE5-9596-0B1DFBEB8751}|Gladiator_Manager.csproj|f:\\visualstudio\\csharp\\gladiator_manager\\items\\equipment\\armour\\basearmour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{82D47FDA-9666-4BE5-9596-0B1DFBEB8751}|Gladiator_Manager.csproj|solutionrelative:items\\equipment\\armour\\basearmour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{82D47FDA-9666-4BE5-9596-0B1DFBEB8751}|Gladiator_Manager.csproj|f:\\visualstudio\\csharp\\gladiator_manager\\items\\equipment\\weapons\\unarmed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{82D47FDA-9666-4BE5-9596-0B1DFBEB8751}|Gladiator_Manager.csproj|solutionrelative:items\\equipment\\weapons\\unarmed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{82D47FDA-9666-4BE5-9596-0B1DFBEB8751}|Gladiator_Manager.csproj|f:\\visualstudio\\csharp\\gladiator_manager\\items\\equipment\\weapons\\baseweapon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{82D47FDA-9666-4BE5-9596-0B1DFBEB8751}|Gladiator_Manager.csproj|solutionrelative:items\\equipment\\weapons\\baseweapon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{82D47FDA-9666-4BE5-9596-0B1DFBEB8751}|Gladiator_Manager.csproj|f:\\visualstudio\\csharp\\gladiator_manager\\gladiators\\gladiator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{82D47FDA-9666-4BE5-9596-0B1DFBEB8751}|Gladiator_Manager.csproj|solutionrelative:gladiators\\gladiator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{82D47FDA-9666-4BE5-9596-0B1DFBEB8751}|Gladiator_Manager.csproj|f:\\visualstudio\\csharp\\gladiator_manager\\inventories\\baseinventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{82D47FDA-9666-4BE5-9596-0B1DFBEB8751}|Gladiator_Manager.csproj|solutionrelative:inventories\\baseinventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{82D47FDA-9666-4BE5-9596-0B1DFBEB8751}|Gladiator_Manager.csproj|f:\\visualstudio\\csharp\\gladiator_manager\\inventories\\playerinventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82D47FDA-9666-4BE5-9596-0B1DFBEB8751}|Gladiator_Manager.csproj|solutionrelative:inventories\\playerinventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82D47FDA-9666-4BE5-9596-0B1DFBEB8751}|Gladiator_Manager.csproj|f:\\visualstudio\\csharp\\gladiator_manager\\gladiators\\gladiator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82D47FDA-9666-4BE5-9596-0B1DFBEB8751}|Gladiator_Manager.csproj|solutionrelative:gladiators\\gladiator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82D47FDA-9666-4BE5-9596-0B1DFBEB8751}|Gladiator_Manager.csproj|f:\\visualstudio\\csharp\\gladiator_manager\\items\\equipment\\weapons\\bronzeweapons.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82D47FDA-9666-4BE5-9596-0B1DFBEB8751}|Gladiator_Manager.csproj|solutionrelative:items\\equipment\\weapons\\bronzeweapons.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82D47FDA-9666-4BE5-9596-0B1DFBEB8751}|Gladiator_Manager.csproj|f:\\visualstudio\\csharp\\gladiator_manager\\items\\equipment\\weapons\\baseweapon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82D47FDA-9666-4BE5-9596-0B1DFBEB8751}|Gladiator_Manager.csproj|solutionrelative:items\\equipment\\weapons\\baseweapon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82D47FDA-9666-4BE5-9596-0B1DFBEB8751}|Gladiator_Manager.csproj|f:\\visualstudio\\csharp\\gladiator_manager\\items\\equipment\\armour\\basearmour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82D47FDA-9666-4BE5-9596-0B1DFBEB8751}|Gladiator_Manager.csproj|solutionrelative:items\\equipment\\armour\\basearmour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82D47FDA-9666-4BE5-9596-0B1DFBEB8751}|Gladiator_Manager.csproj|f:\\visualstudio\\csharp\\gladiator_manager\\items\\baseitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82D47FDA-9666-4BE5-9596-0B1DFBEB8751}|Gladiator_Manager.csproj|solutionrelative:items\\baseitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82D47FDA-9666-4BE5-9596-0B1DFBEB8751}|Gladiator_Manager.csproj|f:\\visualstudio\\csharp\\gladiator_manager\\items\\equipment\\armour\\commonarmour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82D47FDA-9666-4BE5-9596-0B1DFBEB8751}|Gladiator_Manager.csproj|solutionrelative:items\\equipment\\armour\\commonarmour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{82D47FDA-9666-4BE5-9596-0B1DFBEB8751}|Gladiator_Manager.csproj|f:\\visualstudio\\csharp\\gladiator_manager\\items\\trophies\\alltrophies.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{82D47FDA-9666-4BE5-9596-0B1DFBEB8751}|Gladiator_Manager.csproj|solutionrelative:items\\trophies\\alltrophies.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{82D47FDA-9666-4BE5-9596-0B1DFBEB8751}|Gladiator_Manager.csproj|f:\\visualstudio\\csharp\\gladiator_manager\\items\\trophies\\basetrophy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{82D47FDA-9666-4BE5-9596-0B1DFBEB8751}|Gladiator_Manager.csproj|solutionrelative:items\\trophies\\basetrophy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{82D47FDA-9666-4BE5-9596-0B1DFBEB8751}|Gladiator_Manager.csproj|f:\\visualstudio\\csharp\\gladiator_manager\\facilities\\mainhub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{82D47FDA-9666-4BE5-9596-0B1DFBEB8751}|Gladiator_Manager.csproj|solutionrelative:facilities\\mainhub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{82D47FDA-9666-4BE5-9596-0B1DFBEB8751}|Gladiator_Manager.csproj|f:\\visualstudio\\csharp\\gladiator_manager\\datesystem\\datehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{82D47FDA-9666-4BE5-9596-0B1DFBEB8751}|Gladiator_Manager.csproj|solutionrelative:datesystem\\datehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{82D47FDA-9666-4BE5-9596-0B1DFBEB8751}|Gladiator_Manager.csproj|f:\\visualstudio\\csharp\\gladiator_manager\\playerclass\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{82D47FDA-9666-4BE5-9596-0B1DFBEB8751}|Gladiator_Manager.csproj|solutionrelative:playerclass\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{82D47FDA-9666-4BE5-9596-0B1DFBEB8751}|Gladiator_Manager.csproj|f:\\visualstudio\\csharp\\gladiator_manager\\shops\\gladiatormarket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{82D47FDA-9666-4BE5-9596-0B1DFBEB8751}|Gladiator_Manager.csproj|solutionrelative:shops\\gladiatormarket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{82D47FDA-9666-4BE5-9596-0B1DFBEB8751}|Gladiator_Manager.csproj|f:\\visualstudio\\csharp\\gladiator_manager\\shops\\equipmentshop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82D47FDA-9666-4BE5-9596-0B1DFBEB8751}|Gladiator_Manager.csproj|solutionrelative:shops\\equipmentshop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -70,11 +66,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "F:\\VisualStudio\\CSharp\\Gladiator_Manager\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -83,103 +79,132 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-25T15:59:56.512Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CommonArmour.cs",
-              "DocumentMoniker": "F:\\VisualStudio\\CSharp\\Gladiator_Manager\\Items\\Equipment\\Armour\\CommonArmour.cs",
-              "RelativeDocumentMoniker": "Items\\Equipment\\Armour\\CommonArmour.cs",
-              "ToolTip": "F:\\VisualStudio\\CSharp\\Gladiator_Manager\\Items\\Equipment\\Armour\\CommonArmour.cs",
-              "RelativeToolTip": "Items\\Equipment\\Armour\\CommonArmour.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T11:51:08.578Z",
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "BattleHandler.cs",
+              "DocumentMoniker": "F:\\VisualStudio\\CSharp\\Gladiator_Manager\\BattleSystem\\BattleHandler.cs",
+              "RelativeDocumentMoniker": "BattleSystem\\BattleHandler.cs",
+              "ToolTip": "F:\\VisualStudio\\CSharp\\Gladiator_Manager\\BattleSystem\\BattleHandler.cs",
+              "RelativeToolTip": "BattleSystem\\BattleHandler.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAAEsAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-23T12:17:09.206Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "RankXTourney.cs",
+              "DocumentMoniker": "F:\\VisualStudio\\CSharp\\Gladiator_Manager\\Tourneys\\TourneyRanks\\RankXTourney.cs",
+              "RelativeDocumentMoniker": "Tourneys\\TourneyRanks\\RankXTourney.cs",
+              "ToolTip": "F:\\VisualStudio\\CSharp\\Gladiator_Manager\\Tourneys\\TourneyRanks\\RankXTourney.cs",
+              "RelativeToolTip": "Tourneys\\TourneyRanks\\RankXTourney.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAewDIAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-23T12:12:31.435Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Gladiator.cs",
+              "DocumentMoniker": "F:\\VisualStudio\\CSharp\\Gladiator_Manager\\Gladiators\\Gladiator.cs",
+              "RelativeDocumentMoniker": "Gladiators\\Gladiator.cs",
+              "ToolTip": "F:\\VisualStudio\\CSharp\\Gladiator_Manager\\Gladiators\\Gladiator.cs",
+              "RelativeToolTip": "Gladiators\\Gladiator.cs",
+              "ViewState": "AgIAAFYAAAAAAAAAAADwv38AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-23T10:40:54.719Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "BronzeWeapons.cs",
               "DocumentMoniker": "F:\\VisualStudio\\CSharp\\Gladiator_Manager\\Items\\Equipment\\Weapons\\BronzeWeapons.cs",
               "RelativeDocumentMoniker": "Items\\Equipment\\Weapons\\BronzeWeapons.cs",
               "ToolTip": "F:\\VisualStudio\\CSharp\\Gladiator_Manager\\Items\\Equipment\\Weapons\\BronzeWeapons.cs",
               "RelativeToolTip": "Items\\Equipment\\Weapons\\BronzeWeapons.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T11:47:20.508Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-23T10:30:50.039Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Unarmoured.cs",
-              "DocumentMoniker": "F:\\VisualStudio\\CSharp\\Gladiator_Manager\\Items\\Equipment\\Armour\\Unarmoured.cs",
-              "RelativeDocumentMoniker": "Items\\Equipment\\Armour\\Unarmoured.cs",
-              "ToolTip": "F:\\VisualStudio\\CSharp\\Gladiator_Manager\\Items\\Equipment\\Armour\\Unarmoured.cs",
-              "RelativeToolTip": "Items\\Equipment\\Armour\\Unarmoured.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAXAAAAAAAAAA==",
+              "DocumentIndex": 11,
+              "Title": "CommonArmour.cs",
+              "DocumentMoniker": "F:\\VisualStudio\\CSharp\\Gladiator_Manager\\Items\\Equipment\\Armour\\CommonArmour.cs",
+              "RelativeDocumentMoniker": "Items\\Equipment\\Armour\\CommonArmour.cs",
+              "ToolTip": "F:\\VisualStudio\\CSharp\\Gladiator_Manager\\Items\\Equipment\\Armour\\CommonArmour.cs",
+              "RelativeToolTip": "Items\\Equipment\\Armour\\CommonArmour.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T11:43:01.734Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-23T10:16:10.542Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Unarmed.cs",
-              "DocumentMoniker": "F:\\VisualStudio\\CSharp\\Gladiator_Manager\\Items\\Equipment\\Weapons\\Unarmed.cs",
-              "RelativeDocumentMoniker": "Items\\Equipment\\Weapons\\Unarmed.cs",
-              "ToolTip": "F:\\VisualStudio\\CSharp\\Gladiator_Manager\\Items\\Equipment\\Weapons\\Unarmed.cs",
-              "RelativeToolTip": "Items\\Equipment\\Weapons\\Unarmed.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T11:41:53.308Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 9,
               "Title": "BaseArmour.cs",
               "DocumentMoniker": "F:\\VisualStudio\\CSharp\\Gladiator_Manager\\Items\\Equipment\\Armour\\BaseArmour.cs",
               "RelativeDocumentMoniker": "Items\\Equipment\\Armour\\BaseArmour.cs",
               "ToolTip": "F:\\VisualStudio\\CSharp\\Gladiator_Manager\\Items\\Equipment\\Armour\\BaseArmour.cs",
               "RelativeToolTip": "Items\\Equipment\\Armour\\BaseArmour.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T11:36:57.452Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-05T12:17:59.753Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "BaseWeapon.cs",
               "DocumentMoniker": "F:\\VisualStudio\\CSharp\\Gladiator_Manager\\Items\\Equipment\\Weapons\\BaseWeapon.cs",
               "RelativeDocumentMoniker": "Items\\Equipment\\Weapons\\BaseWeapon.cs",
               "ToolTip": "F:\\VisualStudio\\CSharp\\Gladiator_Manager\\Items\\Equipment\\Weapons\\BaseWeapon.cs",
               "RelativeToolTip": "Items\\Equipment\\Weapons\\BaseWeapon.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T11:34:52.213Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-05T12:17:55.346Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 4,
               "Title": "BaseInventory.cs",
               "DocumentMoniker": "F:\\VisualStudio\\CSharp\\Gladiator_Manager\\Inventories\\BaseInventory.cs",
               "RelativeDocumentMoniker": "Inventories\\BaseInventory.cs",
               "ToolTip": "F:\\VisualStudio\\CSharp\\Gladiator_Manager\\Inventories\\BaseInventory.cs",
               "RelativeToolTip": "Inventories\\BaseInventory.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T11:28:35.087Z",
+              "WhenOpened": "2026-06-05T12:17:22.128Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PlayerInventory.cs",
+              "DocumentMoniker": "F:\\VisualStudio\\CSharp\\Gladiator_Manager\\Inventories\\PlayerInventory.cs",
+              "RelativeDocumentMoniker": "Inventories\\PlayerInventory.cs",
+              "ToolTip": "F:\\VisualStudio\\CSharp\\Gladiator_Manager\\Inventories\\PlayerInventory.cs",
+              "RelativeToolTip": "Inventories\\PlayerInventory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-05T12:17:01.113Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BasicTourney.cs",
+              "DocumentMoniker": "F:\\VisualStudio\\CSharp\\Gladiator_Manager\\Tourneys\\BasicTourney.cs",
+              "RelativeDocumentMoniker": "Tourneys\\BasicTourney.cs",
+              "ToolTip": "F:\\VisualStudio\\CSharp\\Gladiator_Manager\\Tourneys\\BasicTourney.cs",
+              "RelativeToolTip": "Tourneys\\BasicTourney.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAqwDYAAABVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-05T12:15:25.058Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "AllTrophies.cs",
               "DocumentMoniker": "F:\\VisualStudio\\CSharp\\Gladiator_Manager\\Items\\Trophies\\AllTrophies.cs",
               "RelativeDocumentMoniker": "Items\\Trophies\\AllTrophies.cs",
@@ -187,86 +212,31 @@
               "RelativeToolTip": "Items\\Trophies\\AllTrophies.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T11:27:13.083Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-05T12:14:57.695Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
-              "Title": "BaseTrophy.cs",
-              "DocumentMoniker": "F:\\VisualStudio\\CSharp\\Gladiator_Manager\\Items\\Trophies\\BaseTrophy.cs",
-              "RelativeDocumentMoniker": "Items\\Trophies\\BaseTrophy.cs",
-              "ToolTip": "F:\\VisualStudio\\CSharp\\Gladiator_Manager\\Items\\Trophies\\BaseTrophy.cs",
-              "RelativeToolTip": "Items\\Trophies\\BaseTrophy.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAoAAAAAAAAAA==",
+              "Title": "BaseItem.cs",
+              "DocumentMoniker": "F:\\VisualStudio\\CSharp\\Gladiator_Manager\\Items\\BaseItem.cs",
+              "RelativeDocumentMoniker": "Items\\BaseItem.cs",
+              "ToolTip": "F:\\VisualStudio\\CSharp\\Gladiator_Manager\\Items\\BaseItem.cs",
+              "RelativeToolTip": "Items\\BaseItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T11:26:53.712Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "DateHandler.cs",
-              "DocumentMoniker": "F:\\VisualStudio\\CSharp\\Gladiator_Manager\\DateSystem\\DateHandler.cs",
-              "RelativeDocumentMoniker": "DateSystem\\DateHandler.cs",
-              "ToolTip": "F:\\VisualStudio\\CSharp\\Gladiator_Manager\\DateSystem\\DateHandler.cs",
-              "RelativeToolTip": "DateSystem\\DateHandler.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAAACQAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T10:39:10.68Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "GladiatorMarket.cs",
-              "DocumentMoniker": "F:\\VisualStudio\\CSharp\\Gladiator_Manager\\Shops\\GladiatorMarket.cs",
-              "RelativeDocumentMoniker": "Shops\\GladiatorMarket.cs",
-              "ToolTip": "F:\\VisualStudio\\CSharp\\Gladiator_Manager\\Shops\\GladiatorMarket.cs",
-              "RelativeToolTip": "Shops\\GladiatorMarket.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T09:31:50.237Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-05T12:14:54.387Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 13,
-              "Title": "Player.cs",
-              "DocumentMoniker": "F:\\VisualStudio\\CSharp\\Gladiator_Manager\\PlayerClass\\Player.cs",
-              "RelativeDocumentMoniker": "PlayerClass\\Player.cs",
-              "ToolTip": "F:\\VisualStudio\\CSharp\\Gladiator_Manager\\PlayerClass\\Player.cs",
-              "RelativeToolTip": "PlayerClass\\Player.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIgAAABEAAAAAAAAAA==",
+              "Title": "EquipmentShop.cs",
+              "DocumentMoniker": "F:\\VisualStudio\\CSharp\\Gladiator_Manager\\Shops\\EquipmentShop.cs",
+              "RelativeDocumentMoniker": "Shops\\EquipmentShop.cs",
+              "ToolTip": "F:\\VisualStudio\\CSharp\\Gladiator_Manager\\Shops\\EquipmentShop.cs",
+              "RelativeToolTip": "Shops\\EquipmentShop.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-02T12:54:34.417Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Gladiator.cs",
-              "DocumentMoniker": "F:\\VisualStudio\\CSharp\\Gladiator_Manager\\Gladiators\\Gladiator.cs",
-              "RelativeDocumentMoniker": "Gladiators\\Gladiator.cs",
-              "ToolTip": "F:\\VisualStudio\\CSharp\\Gladiator_Manager\\Gladiators\\Gladiator.cs",
-              "RelativeToolTip": "Gladiators\\Gladiator.cs",
-              "ViewState": "AgIAADsAAAAAAAAAAAAAAEsAAABOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-02T12:41:33.492Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "MainHub.cs",
-              "DocumentMoniker": "F:\\VisualStudio\\CSharp\\Gladiator_Manager\\Facilities\\MainHub.cs",
-              "RelativeDocumentMoniker": "Facilities\\MainHub.cs",
-              "ToolTip": "F:\\VisualStudio\\CSharp\\Gladiator_Manager\\Facilities\\MainHub.cs",
-              "RelativeToolTip": "Facilities\\MainHub.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFUAAAB9AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-08T17:38:38.579Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-05T12:10:56.775Z"
             }
           ]
         }

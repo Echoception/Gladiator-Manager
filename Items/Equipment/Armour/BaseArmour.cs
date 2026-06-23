@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Gladiator_Manager.Items.Equipment.Armour
 {
-    internal class BaseArmour : BaseItem
+    internal abstract class BaseArmour : BaseItem
     {
         public BaseArmour()
         {

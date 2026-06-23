@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Gladiator_Manager.Inventories
 {
-    internal class BaseInventory
+    internal abstract class BaseInventory
     {
         public BaseInventory()
         {

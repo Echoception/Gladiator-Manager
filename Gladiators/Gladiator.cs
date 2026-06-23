@@ -87,7 +87,7 @@ namespace Gladiator_Manager.Gladiators
             
             if(attackingGladiator != null)
             {
-                int damage = ((2 * lvl + 2) / 5) * basePower * attackingGladiator.Attack / Defence / 50 + 2;
+                int damage = ((2 * lvl + 2) / 5) * basePower * (attackingGladiator.Attack + attackingGladiator.Weapon.Power) / (Defence + Armour.ArmourRating) / 50 + 2;
                 _health = Math.Clamp(_health -= damage, 0, MaxHealth);
 
                 Console.WriteLine();

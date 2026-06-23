@@ -44,8 +44,17 @@ namespace Gladiator_Manager.Tourneys
 
                 foreach(Gladiator glad in CompetingGladiators)
                 {
-                    Console.WriteLine($"{count}: {glad.Name}  -  {glad.Rating}");
-                    count++;
+                    if(glad.IsPlayers)
+                    {
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.WriteLine($"{count}: {glad.Name}  -  {glad.Rating}");
+                        Console.ForegroundColor = ConsoleColor.White;
+                    }
+                    else
+                    {
+                        Console.WriteLine($"{count}: {glad.Name}  -  {glad.Rating}");
+                    }
+                        count++;
                 }
                 Console.ReadKey();
             }
@@ -57,12 +66,23 @@ namespace Gladiator_Manager.Tourneys
 
             if (playerGlad != null && !playerGlad.InFacilities)
             {
-                CompetingGladiators.Add(playerGlad);
+                //  Add the player to a random spot instead of always at the start
+                Random placement = new Random();
+                int playerPlacement = placement.Next(0, ListSize);
 
-                for (int i = 1; i < ListSize; i++)
+                //CompetingGladiators.Add(playerGlad);
+
+                for (int i = 0; i < ListSize; i++)
                 {
-                    Gladiator gladiator = gladiatorCreator.CreateRandomGladiator();
-                    CompetingGladiators.Add(gladiator);
+                    if(i == playerPlacement)
+                    {
+                        CompetingGladiators.Add(playerGlad);
+                    }
+                    else
+                    {
+                        Gladiator gladiator = gladiatorCreator.CreateRandomGladiator();
+                        CompetingGladiators.Add(gladiator);
+                    }
                 }
                 return true;
             }
