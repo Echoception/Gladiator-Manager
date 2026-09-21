@@ -106,7 +106,7 @@ namespace Gladiator_Manager.Facilities
             {
                 if(glad != null)
                 {
-                    Console.WriteLine($"[{count}]: {glad.Name} - Rating: {glad.Rating}");
+                    Console.WriteLine($"[{count}] {glad.Name} : HP {glad.Health}/{glad.MaxHealth} - Rating: {glad.Rating}");
                     count++;
                 }
                 else

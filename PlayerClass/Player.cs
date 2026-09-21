@@ -59,7 +59,7 @@ namespace Gladiator_Manager.PlayerClass
             Console.WriteLine();
             foreach(Gladiator glad in _gladiatorList)
             {
-                Console.Write($"[{count}] {glad.Name} - Rating {glad.Rating}");
+                Console.Write($"[{count}] {glad.Name} : HP {glad.Health}/{glad.MaxHealth} - Rating {glad.Rating}");
                 if(glad.InFacilities)
                 {
                     Console.Write("    [ Using Facilities ]");

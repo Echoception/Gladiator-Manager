@@ -38,9 +38,22 @@ namespace Gladiator_Manager.Items.Equipment.Armour
                 Name = "Iron Armour";
                 Price = 150;
                 ArmourRating = 20;
+                Weight = 10;
+            }
+        }
+
+        internal class SteelArmour : BaseArmour
+        {
+            public SteelArmour()
+            {
+                Name = "Steel Armour";
+                Price = 200;
+                ArmourRating = 25;
                 Weight = 9;
             }
         }
 
+
+        //-----
     }
 }

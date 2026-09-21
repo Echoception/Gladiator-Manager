@@ -74,7 +74,7 @@ namespace Gladiator_Manager.Tourneys
             }
 
 
-           // do
+            do
             {
                 Console.Clear();
                 Console.WriteLine();
@@ -128,7 +128,7 @@ namespace Gladiator_Manager.Tourneys
                         break;
                 }
 
-            }// while (choice != 0);
+            }while (choice != 0);
 
         }
 
