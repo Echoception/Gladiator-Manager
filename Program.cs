@@ -26,6 +26,8 @@ MainHub mainHub = new MainHub();
 
 DateHandler dateHandler = new DateHandler();
 
+EquipmentShop equipmentShop = new EquipmentShop();
+
 UserInput userInput = new UserInput();
 
 Accommodations accommodations = new Accommodations();
@@ -42,6 +44,6 @@ allTourneys.Rank1Tourneys.UnlockRank1Tourneys();
 while(true)
 {
     mainHub.DisplayMainHub(player, gladiatorMarket, battleHandler, userInput, dateHandler, accommodations, gladiatorCreator, mainMarket, allTourneys, timer, facilityUpgrades,
-        trainingFields, infirmary);
+        trainingFields, infirmary, equipmentShop);
     Console.Clear();
 }

@@ -18,5 +18,14 @@ namespace Gladiator_Manager.Items.Equipment.Weapons
 
         public int Power { get; set; }
         public int Weight { get; set; }
+
+        public void DisplayStats()
+        {
+            Console.WriteLine($"{Environment.NewLine}Name: {Name}");
+            Console.WriteLine($"Price: {Price}");
+            Console.WriteLine($"Power: {Power}");
+            Console.WriteLine($"Weight: {Weight}");
+        }
+
     }
 }

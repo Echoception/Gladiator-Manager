@@ -24,19 +24,19 @@ namespace Gladiator_Manager.Facilities
 
         public void DisplayMainHub(Player player, GladiatorMarket gladiatorMarket, BattleHandler battleHandler, UserInput userInput, DateHandler dateHandler,
             Accommodations accommodations, GladiatorCreator gladiatorCreator, MainMarket mainMarket, AllTourneys allTourneys, Ctimer timer, FacilityUpgrades facilityUpgrades,
-            TrainingFields trainingFields, Infirmary infirmary)
+            TrainingFields trainingFields, Infirmary infirmary, EquipmentShop equipmentShop)    //  Coming back to this was awful, NEVER let it get this out of hand again
         {
             Console.WriteLine();
             player.DisplayGold();
             Console.WriteLine();
             dateHandler.DisplayDate();
             Console.WriteLine($"{Environment.NewLine}{Environment.NewLine}{Environment.NewLine}");
-            Menu(player, gladiatorMarket, battleHandler, userInput, dateHandler, accommodations, gladiatorCreator, mainMarket, allTourneys, timer, facilityUpgrades, trainingFields, infirmary);
+            Menu(player, gladiatorMarket, battleHandler, userInput, dateHandler, accommodations, gladiatorCreator, mainMarket, allTourneys, timer, facilityUpgrades, trainingFields, infirmary, equipmentShop);
         }
 
         public void Menu(Player player, GladiatorMarket gladiatorMarket, BattleHandler battleHandler, UserInput userInput, DateHandler dateHandler,
             Accommodations accommodations, GladiatorCreator gladiatorCreator, MainMarket mainMarket, AllTourneys allTourneys, Ctimer timer, FacilityUpgrades facilityUpgrades,
-            TrainingFields trainingFields, Infirmary infirmary)
+            TrainingFields trainingFields, Infirmary infirmary, EquipmentShop equipmentShop)
         {
 
             Console.WriteLine("[1] - Go to the Market");
@@ -53,7 +53,7 @@ namespace Gladiator_Manager.Facilities
             switch (choice)
             {
                 case 1:
-                    mainMarket.Menu(userInput, gladiatorMarket, player, accommodations, facilityUpgrades, trainingFields, infirmary);
+                    mainMarket.Menu(userInput, gladiatorMarket, player, accommodations, facilityUpgrades, trainingFields, infirmary, equipmentShop, allTourneys);
                     break;
 
                 case 2:

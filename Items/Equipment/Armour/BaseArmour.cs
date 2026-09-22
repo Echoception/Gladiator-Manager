@@ -18,5 +18,14 @@ namespace Gladiator_Manager.Items.Equipment.Armour
 
         public int ArmourRating {  get; set; }
         public int Weight { get; set; }
+
+        public void DisplayStats()
+        {
+            Console.WriteLine($"{Environment.NewLine}Name: {Name}");
+            Console.WriteLine($"Price: {Price}");
+            Console.WriteLine($"Armour Rating: {ArmourRating}");
+            Console.WriteLine($"Weight: {Weight}");
+        }
+
     }
 }

@@ -45,26 +45,42 @@ namespace Gladiator_Manager.Tourneys
             return result;
         }
 
-        public void MainMenu(UserInput userInput, BattleHandler battleHandler, Player player, GladiatorCreator gladiatorCreator, Ctimer timer)
+        private void CheckForRankUnlocksAndUnlock() 
         {
-            int choice = 99;
-            if(!_rank2Unlocked)
+            if (!_rank2Unlocked)
             {
                 _rank2Unlocked = CheckForRank2Unlocked();
-                if(_rank2Unlocked)
+                if (_rank2Unlocked)
                 {
                     _rank2Tourneys.UnlockRank2Tourneys();
                 }
             }
 
-            if(!_rank3Unlocked)
+            if (!_rank3Unlocked)
             {
                 _rank3Unlocked = CheckForRank3Unlocked();
-                if(_rank3Unlocked)
+                if (_rank3Unlocked)
                 {
                     _rank3Tourneys.UnlockRank3Tourney();
                 }
             }
+        }
+
+        public void CheckForRankUnlocksShop()
+        {
+            if(!_rank2Unlocked)
+            {
+                _rank2Unlocked = CheckForRank2Unlocked();
+            }
+            if(!_rank3Unlocked)
+            {
+                _rank3Unlocked = CheckForRank3Unlocked();
+            }
+        }
+
+        public void MainMenu(UserInput userInput, BattleHandler battleHandler, Player player, GladiatorCreator gladiatorCreator, Ctimer timer)
+        {
+            int choice = 99;
 
             if(CheckAvailableGladiators(player))
             {
@@ -76,6 +92,7 @@ namespace Gladiator_Manager.Tourneys
 
             do
             {
+                CheckForRankUnlocksAndUnlock();
                 Console.Clear();
                 Console.WriteLine();
                 Console.WriteLine("[1] - Rank 1 Tournaments");
@@ -124,7 +141,7 @@ namespace Gladiator_Manager.Tourneys
 
                     default:
                         userInput.DisplayPickValidOptionText();
-                        MainMenu(userInput, battleHandler, player, gladiatorCreator, timer);
+                        //MainMenu(userInput, battleHandler, player, gladiatorCreator, timer);   Might need to add back in at some point
                         break;
                 }
 

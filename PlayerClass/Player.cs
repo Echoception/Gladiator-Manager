@@ -17,7 +17,7 @@ namespace Gladiator_Manager.PlayerClass
         {
             _gladiatorList = new();
             _trophyDictionary = new();
-            _gold = 60000; // default 500?
+            _gold = 600000; // default 500?
             _inventory = new();
         }
 

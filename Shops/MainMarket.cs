@@ -1,6 +1,7 @@
 ﻿using Gladiator_Manager.Facilities;
 using Gladiator_Manager.Input;
 using Gladiator_Manager.PlayerClass;
+using Gladiator_Manager.Tourneys;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,7 +15,7 @@ namespace Gladiator_Manager.Shops
 
 
         public void Menu(UserInput userInput, GladiatorMarket gladiatorMarket, Player player, Accommodations accommodations, FacilityUpgrades facilityUpgrades,
-            TrainingFields trainingFields, Infirmary infirmary)
+            TrainingFields trainingFields, Infirmary infirmary, EquipmentShop equipmentShop, AllTourneys allTourneys)
         {
             int choice = 99;
 
@@ -39,7 +40,7 @@ namespace Gladiator_Manager.Shops
                         break;
 
                     case 2:
-                        Console.WriteLine("Not Implimented");
+                        equipmentShop.BuyOrSellMenu(player, userInput, allTourneys);
                         break;
 
                     case 3:
