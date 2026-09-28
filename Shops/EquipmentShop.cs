@@ -21,7 +21,13 @@ namespace Gladiator_Manager.Shops
             GenerateBaseInventory();
         }
 
+        private bool _ironUnlocked = false;
+        private bool _steelUnlocked = false;
+
         public ShopInventory ShopInventory { get; set; }
+
+        public bool IronUnlocked => _ironUnlocked;
+        public bool SteelUnlocked => _steelUnlocked;
 
         public void BuyOrSellMenu(Player player, UserInput userInput, AllTourneys allTourneys)
         {
@@ -46,7 +52,7 @@ namespace Gladiator_Manager.Shops
                         break;
 
                     case 2:
-                        Sell(player);
+                        Sell(player, userInput);
                         break;
 
                     case 0:
@@ -63,6 +69,8 @@ namespace Gladiator_Manager.Shops
         private void Buy(Player player, UserInput userInput, AllTourneys allTourneys)
         {
             allTourneys.CheckForRankUnlocksShop();
+            _ironUnlocked = CheckIfIronAlreadyAdded(allTourneys);
+            _steelUnlocked = CheckIfSteelAlreadyAdded(allTourneys);
 
             int choice = 99;
             do
@@ -177,10 +185,47 @@ namespace Gladiator_Manager.Shops
             }while(choice  != 0);
         }
 
-        private void Sell(Player player)
+        private void Sell(Player player, UserInput userInput)
         {
-            Console.WriteLine("SELL");
-            Console.ReadKey();
+            Console.Clear();
+
+            if(player.Inventory.ItemList.Count > 0)
+            {
+                int count = 1;
+                Console.WriteLine();
+                player.DisplayGold();
+                Console.WriteLine($"{Environment.NewLine}Pick an item to sell: {Environment.NewLine}");
+
+                foreach(BaseItem item in player.Inventory.ItemList)
+                {
+                    Console.WriteLine($"[{count}] {item.Name} - Value: {item.Price}");
+                    count++;
+                }
+
+                Console.WriteLine();
+                Console.WriteLine("[0] - EXIT");
+                int choice = userInput.PickItemFromList(player.Inventory.ItemList);
+
+                if(choice > 0)
+                {
+                    Console.WriteLine($"{Environment.NewLine}Are you sure you want to sell {player.Inventory.ItemList[choice - 1].Name}?");
+                    bool confirm = userInput.PickYesOrNo();
+
+                    if(confirm)
+                    {
+                        player.AddGold(player.Inventory.ItemList[choice - 1].Price);
+                        player.Inventory.RemoveItem(choice - 1);
+                    }
+                }
+
+            }
+            else
+            {
+                Console.WriteLine("You have no items to sell");
+                Console.ReadKey();
+                return;
+            }
+
         }
 
         private void GenerateBaseInventory()
@@ -201,24 +246,64 @@ namespace Gladiator_Manager.Shops
             ShopInventory.ArmourList.Add(bronzeArmour);
         }
 
-        private void AddIronWeapons()
+        private bool CheckIfIronAlreadyAdded(AllTourneys allTourneys)
         {
-
+            if(allTourneys.Rank2Unlocked && IronUnlocked)
+            {
+                return true;
+            }
+            else if(allTourneys.Rank2Unlocked && !IronUnlocked)
+            {
+                AddIronEquipment();
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
-        private void AddIronArmour()
+        private bool CheckIfSteelAlreadyAdded(AllTourneys allTourneys)
         {
-
+            if(allTourneys.Rank3Unlocked && SteelUnlocked)
+            {
+                return true;
+            }
+            else if(allTourneys.Rank3Unlocked && !SteelUnlocked)
+            {
+                AddSteelEquipment();
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
-        private void AddSteelWeapons()
+        private void AddIronEquipment()
         {
+            IronWeapons ironWeapons = new();
 
+            foreach(BaseWeapon weapon in ironWeapons.IronWeaponList)
+            {
+                ShopInventory.WeaponList.Add(weapon);
+            }
+
+            CommonArmour.IronArmour ironArmour = new();
+            ShopInventory.ArmourList.Add(ironArmour);
         }
 
-        private void AddSteelArmour()
+        private void AddSteelEquipment()
         {
+            SteelWeapons steelWeapons = new();
 
+            foreach(BaseWeapon weapon in  steelWeapons.SteelWeaponList)
+            {
+                ShopInventory.WeaponList.Add(weapon);
+            }
+
+            CommonArmour.SteelArmour steelArmour = new();
+            ShopInventory.ArmourList.Add(steelArmour);
         }
 
         //-------

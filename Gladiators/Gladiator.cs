@@ -134,14 +134,16 @@ namespace Gladiator_Manager.Gladiators
             Console.ForegroundColor = ConsoleColor.White;
         }
 
-        public void EquipWeapon(BaseWeapon weapon)
+        public void EquipWeapon(BaseWeapon weapon, Player player)
         {
             _weapon = weapon;
+            player.Inventory.ItemList.Remove(weapon);
         }
 
-        public void EquipArmour(BaseArmour armour)
+        public void EquipArmour(BaseArmour armour, Player player)
         {
             _armour = armour;
+            player.Inventory.ItemList.Remove(armour);
         }
 
         public void RemoveWeapon(Player player)

@@ -8,6 +8,25 @@ namespace Gladiator_Manager.Items.Equipment.Weapons
 {
     internal class IronWeapons
     {
+        public IronWeapons()
+        {
+            _ironWeaponList = GenertaeWeaponList();
+        }
+
+        private List<BaseWeapon> _ironWeaponList { get; set; }
+
+        public List<BaseWeapon> IronWeaponList => _ironWeaponList;
+
+        private List<BaseWeapon> GenertaeWeaponList()
+        {
+            IronDagger ironDagger = new();
+            IronSword ironSword = new();
+            IronAxe ironAxe = new();
+            IronMace ironMace = new();
+
+            List<BaseWeapon> ironWeaponList = [ironDagger, ironSword, ironAxe, ironMace];
+            return ironWeaponList;
+        }
 
         internal class IronDagger : BaseWeapon
         {

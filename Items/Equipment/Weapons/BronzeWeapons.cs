@@ -24,13 +24,7 @@ namespace Gladiator_Manager.Items.Equipment.Weapons
             BronzeAxe bronzeAxe = new();
             BronzeMace bronzeMace = new();
 
-            List<BaseWeapon> bronzeWeapons = new();
-
-            bronzeWeapons.Add(bronzeDagger);
-            bronzeWeapons.Add(bronzeSword);
-            bronzeWeapons.Add(bronzeAxe);
-            bronzeWeapons.Add(bronzeMace);
-
+            List<BaseWeapon> bronzeWeapons = [bronzeDagger, bronzeSword, bronzeAxe, bronzeMace];
             return bronzeWeapons;
         }
 
