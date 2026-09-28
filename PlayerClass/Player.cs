@@ -57,10 +57,10 @@ namespace Gladiator_Manager.PlayerClass
         {
             int count = 1;
             Console.WriteLine();
-            foreach(Gladiator glad in _gladiatorList)
+            foreach (Gladiator glad in _gladiatorList)
             {
                 Console.Write($"[{count}] {glad.Name} : HP {glad.Health}/{glad.MaxHealth} - Rating {glad.Rating}");
-                if(glad.InFacilities)
+                if (glad.InFacilities)
                 {
                     Console.Write("    [ Using Facilities ]");
                 }
@@ -90,7 +90,37 @@ namespace Gladiator_Manager.PlayerClass
                     Console.Clear();
                     Console.WriteLine();
                     GladiatorList[choice - 1].DisplayStats();
-                    Console.ReadKey();
+
+                    Console.WriteLine("[1] - Equip Weapon");
+                    Console.WriteLine("[2] - Equip Armour");
+                    Console.WriteLine("[3] - Remove Weapon");
+                    Console.WriteLine("[4] - Remove Armour");
+                    Console.WriteLine("[0] - EXIT");
+
+                    int menu = userInput.PickValidInt();
+
+                    switch (menu)
+                    {
+                        case 1:
+                            _inventory.PickWeaponToEquip(userInput, GladiatorList[choice - 1]);
+                            //Console.ReadKey();
+                            break;
+                        case 2:
+                            _inventory.PickArmourToEquip(userInput, GladiatorList[choice - 1]);
+                            break;
+                        case 3:
+                            GladiatorList[choice - 1].RemoveWeapon(_inventory.ItemList);
+                            break;
+                        case 4:
+                            GladiatorList[choice - 1].RemoveArmour(_inventory.ItemList);
+                            break;
+                        case 0:
+                            return;
+                        default:
+                            userInput.DisplayPickValidNumberText();
+                            break;
+                    }
+
                 }
 
             } while (choice > 0);
@@ -98,7 +128,7 @@ namespace Gladiator_Manager.PlayerClass
 
         public void AddGladiatorToRoster(Gladiator gladiator)
         {
-                _gladiatorList.Add(gladiator);
+            _gladiatorList.Add(gladiator);
         }
 
         public void RemoveGladiatorFromList(int index)
@@ -118,7 +148,7 @@ namespace Gladiator_Manager.PlayerClass
 
             choice = userInput.PickItemFromList(GladiatorList);
 
-            if(choice > 0)
+            if (choice > 0)
             {
                 Gladiator gladiator = GladiatorList[choice - 1];
                 return gladiator;
@@ -128,12 +158,12 @@ namespace Gladiator_Manager.PlayerClass
                 Gladiator nullGlad = null;
                 return nullGlad;
             }
-            
+
         }
 
         public void AddTrophy(BaseTrophy trophy)  //   Add to inventory??
         {
-            if(TrophyDictionary.ContainsKey(trophy))
+            if (TrophyDictionary.ContainsKey(trophy))
             {
                 int newValue = 0;
 
@@ -151,7 +181,7 @@ namespace Gladiator_Manager.PlayerClass
             Console.Clear();
             Console.WriteLine();
 
-            for(int i = 0; i < _trophyDictionary.Count; i++)
+            for (int i = 0; i < _trophyDictionary.Count; i++)
             {
                 Console.WriteLine($"{_trophyDictionary.ElementAt(i).Key.Name} - x{_trophyDictionary.ElementAt(i).Value}");
             }
@@ -160,7 +190,7 @@ namespace Gladiator_Manager.PlayerClass
 
         public void WeeklyHeal()
         {
-            foreach(Gladiator glad in _gladiatorList)
+            foreach (Gladiator glad in _gladiatorList)
             {
                 glad.WeeklyHeal();
             }

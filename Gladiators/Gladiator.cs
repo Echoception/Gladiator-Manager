@@ -1,4 +1,5 @@
-﻿using Gladiator_Manager.Items.Equipment.Armour;
+﻿using Gladiator_Manager.Items;
+using Gladiator_Manager.Items.Equipment.Armour;
 using Gladiator_Manager.Items.Equipment.Weapons;
 using Gladiator_Manager.PlayerClass;
 using System;
@@ -134,27 +135,45 @@ namespace Gladiator_Manager.Gladiators
             Console.ForegroundColor = ConsoleColor.White;
         }
 
-        public void EquipWeapon(BaseWeapon weapon, Player player)
+        public void EquipWeapon(BaseWeapon weapon, List<BaseItem> inventory)
         {
-            _weapon = weapon;
-            player.Inventory.ItemList.Remove(weapon);
+            if(Weapon.Name == _unarmed.Name)
+            {
+                _weapon = weapon;
+                inventory.Remove(weapon);
+            }
+            else
+            {
+                inventory.Add(_weapon);
+                _weapon = weapon;
+                inventory.Remove(weapon);
+            }
         }
 
-        public void EquipArmour(BaseArmour armour, Player player)
+        public void EquipArmour(BaseArmour armour, List<BaseItem> inventory)
         {
-            _armour = armour;
-            player.Inventory.ItemList.Remove(armour);
+            if(Armour.Name == _unarmoured.Name)
+            {
+                _armour = armour;
+                inventory.Remove(armour);
+            }
+            else
+            {
+                inventory.Add(Armour);
+                _armour = armour;
+                inventory.Remove(armour);
+            }
         }
 
-        public void RemoveWeapon(Player player)
+        public void RemoveWeapon(List<BaseItem> inventory)
         {
-            player.Inventory.AddItem(Weapon);
+            inventory.Add(Weapon);
             _weapon = _unarmed;
         }
 
-        public void RemoveArmour(Player player)
+        public void RemoveArmour(List<BaseItem> inventory)
         {
-            player.Inventory.AddItem(Armour);
+            inventory.Add(Armour);
             _armour = _unarmoured;
         }
 
