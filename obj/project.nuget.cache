@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "ErcXVfaCbAc=",
+  "dgSpecHash": "YE4h9xmtJ44=",
   "success": true,
-  "projectFilePath": "F:\\VisualStudio\\CSharp\\Gladiator_Manager\\Gladiator_Manager.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\The_C\\Documents\\C#\\GladiatorManager\\Gladiator-Manager\\Gladiator_Manager.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\The_C\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.31\\microsoft.windowsdesktop.app.ref.8.0.31.nupkg.sha512",
+    "C:\\Users\\The_C\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.31\\microsoft.netcore.app.ref.8.0.31.nupkg.sha512",
+    "C:\\Users\\The_C\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.31\\microsoft.aspnetcore.app.ref.8.0.31.nupkg.sha512",
+    "C:\\Users\\The_C\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\8.0.31\\microsoft.netcore.app.host.win-x64.8.0.31.nupkg.sha512"
+  ],
   "logs": []
 }

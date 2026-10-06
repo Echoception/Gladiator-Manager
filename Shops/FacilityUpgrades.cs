@@ -1,5 +1,6 @@
 ﻿using Gladiator_Manager.Facilities;
 using Gladiator_Manager.Input;
+using Gladiator_Manager.PlayerClass;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +13,7 @@ namespace Gladiator_Manager.Shops
     {
 
 
-        public void Menu(UserInput userInput, Accommodations accommodations, TrainingFields trainingFields, Infirmary infirmary)
+        public void Menu(UserInput userInput, Accommodations accommodations, TrainingFields trainingFields, Infirmary infirmary, Player player)
         {
             int choice = 99;
 
@@ -32,7 +33,7 @@ namespace Gladiator_Manager.Shops
                 switch (choice)
                 {
                     case 1:
-                        accommodations.RankUp();
+                        accommodations.BuyUpgrade(player);
                         break;
 
                     case 2:
@@ -40,7 +41,7 @@ namespace Gladiator_Manager.Shops
                         break;
 
                     case 3:
-                        infirmary.RankUp();
+                        infirmary.BuyUpgrade(player);
                         break;
 
                     case 0:

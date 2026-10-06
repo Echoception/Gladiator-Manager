@@ -22,6 +22,8 @@ namespace Gladiator_Manager.Facilities
         private int _healAmount { get; set; }
         private int _rank { get; set; }
         private List<Gladiator> _usingInfirmary { get; set; }
+        private int _rank1UpgradeCost = 500;
+        private int _rank2UpgradeCost = 1000;
 
         public int HealAmount => _healAmount;
         public int Rank => _rank;
@@ -190,6 +192,51 @@ namespace Gladiator_Manager.Facilities
             _rank += 1;
         }
 
+        private void UpgradeToRank2(Player player)
+        {
+            if(player.Gold >= _rank1UpgradeCost)
+            {
+                player.RemoveGold(_rank1UpgradeCost);
+                RankUp();
+                DisplayConfirmUpgrade();
+            }
+            else
+            {
+                DisplayNotEnoughGold();
+            }
+        }
+
+        private void UpgradeToRank3(Player player)
+        {
+            if(player.Gold >= _rank2UpgradeCost)
+            {
+                player.RemoveGold(_rank2UpgradeCost);
+                RankUp();
+                DisplayConfirmUpgrade();
+            }
+            else
+            {
+                DisplayNotEnoughGold();
+            }
+        }
+
+        public void BuyUpgrade(Player player)
+        {
+            switch(Rank)
+            {
+                case 1:
+                    UpgradeToRank2(player);
+                    break;
+                case 2:
+                    UpgradeToRank3(player);
+                    break;
+                case 3:
+                    Console.WriteLine("Your Infirmary is already max rank");
+                    Console.ReadKey();
+                    break;
+            }
+        }
+
         public void WeeklyClear()
         {
             foreach(Gladiator glad in _usingInfirmary)
@@ -206,6 +253,18 @@ namespace Gladiator_Manager.Facilities
             }
 
             _usingInfirmary.Clear();
+        }
+
+        private void DisplayConfirmUpgrade()
+        {
+            Console.WriteLine($"You have upgraded your Infirmary to rank: {Rank}");
+            Console.ReadKey();
+        }
+
+        private void DisplayNotEnoughGold()
+        {
+            Console.WriteLine("You do not have enough gold for this upgrade");
+            Console.ReadKey();
         }
 
         //----

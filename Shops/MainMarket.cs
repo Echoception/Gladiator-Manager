@@ -44,7 +44,7 @@ namespace Gladiator_Manager.Shops
                         break;
 
                     case 3:
-                        facilityUpgrades.Menu(userInput, accommodations, trainingFields, infirmary);
+                        facilityUpgrades.Menu(userInput, accommodations, trainingFields, infirmary, player);
                         break;
 
                     case 0:
