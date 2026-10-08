@@ -37,7 +37,7 @@ namespace Gladiator_Manager.Shops
                         break;
 
                     case 2:
-                        trainingFields.RankUp();
+                        trainingFields.BuyUpgrade(player);
                         break;
 
                     case 3:
@@ -55,6 +55,37 @@ namespace Gladiator_Manager.Shops
             } while (choice != 0);
 
         }
+        
+        private void BuyAccommodationUpgrade(Player player, Accommodations accommodations, UserInput userInput)
+        {
+            Console.Clear();
+            Console.WriteLine();
+            
+            switch(accommodations.Rank)
+            {
+                case 1:
+                    Console.WriteLine($"Accommodation upgrade costs {accommodations.Rank2UpgradeCost}g");
+                    Console.WriteLine("Would you like to buy this upgrade?");
+                    bool confirm = userInput.PickYesOrNo();
 
+                    if(confirm)
+                    {
+                        accommodations.UpgradeToRank2(player);
+                    }
+
+                    break;
+                case 2:
+
+                    break;
+                case 3:
+                    Console.WriteLine("Your accommodations are at max rank");
+                    Console.ReadKey();
+                    break;
+                case 0:
+                    return;
+            }
+        }
+
+        //-----
     }
 }

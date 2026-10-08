@@ -21,10 +21,15 @@ namespace Gladiator_Manager.Facilities
         private int _rank { get; set; }
         private List<Gladiator> _inFacilities { get; set; }
         private int[] _statChoice { get; set; }
+        private int _rank1UpgradeCost = 500;
+        private int _rank2UpgradeCost = 1000;
+
 
         public int Rank => _rank;
         public List<Gladiator> InFacilities => _inFacilities;
         public int[] StatChoice => _statChoice;
+        public int Rank1UpgradeCost => _rank1UpgradeCost;
+        public int Rank2UpgradeCost => _rank2UpgradeCost;
 
 
         private int PickStatToRaise(UserInput userInput, Gladiator gladiator)
@@ -216,12 +221,68 @@ namespace Gladiator_Manager.Facilities
             _inFacilities.Clear();
         }
 
-        public void RankUp()
+        private void UpgradeToRank2(Player player)
+        {
+            if(player.Gold >= _rank1UpgradeCost)
+            {
+                player.RemoveGold(_rank1UpgradeCost);
+                RankUp();
+                DisplayConfirmUpgrade();
+            }
+            else
+            {
+                DisplayNotEnoughGold();
+            }
+        }
+
+        private void UpgradeToRank3(Player player)
+        {
+            if(player.Gold >= _rank2UpgradeCost)
+            {
+                player.RemoveGold(_rank2UpgradeCost);
+                RankUp();
+                DisplayConfirmUpgrade();
+            }
+            else
+            {
+                DisplayNotEnoughGold();
+            }
+        }
+
+        public void BuyUpgrade(Player player)
+        {
+            switch(Rank)
+            {
+                case 1:
+                    UpgradeToRank2(player);
+                    break;
+                case 2:
+                    UpgradeToRank3(player);
+                    break;
+                case 3:
+                    Console.WriteLine("Your training fields are at max rank");
+                    Console.ReadKey();
+                    break;
+
+            }
+        }
+
+        private void RankUp()
         {
             _rank += 1;
         }
-
         
+        private void DisplayNotEnoughGold()
+        {
+            Console.WriteLine("You do not have enough gold for that upgrade");
+            Console.ReadKey();
+        }
+
+        private void DisplayConfirmUpgrade()
+        {
+            Console.WriteLine($"You have upgraded your training fields to rank {Rank}");
+            Console.ReadKey();
+        }
 
         public void Menu(UserInput userInput, Player player)
         {

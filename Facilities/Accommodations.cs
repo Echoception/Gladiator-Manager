@@ -22,7 +22,8 @@ namespace Gladiator_Manager.Facilities
 
         public int AccommodationSize => _accommodationSize;
         public int Rank => _rank;
-
+        public int Rank1UpgradeCost => _rank1UpgradeCost;
+        public int Rank2UpgradeCost => _rank2UpgradeCost;
         private int _slotsToGainOnRankUp = 3;
 
 
@@ -31,7 +32,7 @@ namespace Gladiator_Manager.Facilities
             _rank++;
         }
 
-        private void UpgradeToRank2(Player player)
+        public void UpgradeToRank2(Player player)
         {
             if(player.Gold >= _rank1UpgradeCost)
             {
