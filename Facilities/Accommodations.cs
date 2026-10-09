@@ -46,7 +46,7 @@ namespace Gladiator_Manager.Facilities
             }
         }
 
-        private void UpgradeToRank3(Player player)
+        public void UpgradeToRank3(Player player)
         {
             if(player.Gold >= _rank2UpgradeCost)
             {
@@ -72,22 +72,6 @@ namespace Gladiator_Manager.Facilities
             Console.ReadKey();
         }
 
-        public void BuyUpgrade(Player player)
-        {
-            switch(Rank)
-            {
-                case 1:
-                    UpgradeToRank2(player);
-                    break;
-                case 2:
-                    UpgradeToRank3(player);
-                    break;
-                case 3:
-                    Console.WriteLine("Your accommodations are at max rank");
-                    Console.ReadKey();
-                    break;
-            }
-        }
 
         //----
     }

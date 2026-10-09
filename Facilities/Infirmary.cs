@@ -27,6 +27,8 @@ namespace Gladiator_Manager.Facilities
 
         public int HealAmount => _healAmount;
         public int Rank => _rank;
+        public int Rank1UpgradeCost => _rank1UpgradeCost;
+        public int Rank2UpgradeCost => _rank2UpgradeCost;
         public List<Gladiator> UsingInfirmary => _usingInfirmary;
 
 
@@ -187,12 +189,12 @@ namespace Gladiator_Manager.Facilities
 
         }
 
-        public void RankUp()
+        private void RankUp()
         {
-            _rank += 1;
+            _rank++;
         }
 
-        private void UpgradeToRank2(Player player)
+        public void UpgradeToRank2(Player player)
         {
             if(player.Gold >= _rank1UpgradeCost)
             {
@@ -206,7 +208,7 @@ namespace Gladiator_Manager.Facilities
             }
         }
 
-        private void UpgradeToRank3(Player player)
+        public void UpgradeToRank3(Player player)
         {
             if(player.Gold >= _rank2UpgradeCost)
             {
@@ -217,23 +219,6 @@ namespace Gladiator_Manager.Facilities
             else
             {
                 DisplayNotEnoughGold();
-            }
-        }
-
-        public void BuyUpgrade(Player player)
-        {
-            switch(Rank)
-            {
-                case 1:
-                    UpgradeToRank2(player);
-                    break;
-                case 2:
-                    UpgradeToRank3(player);
-                    break;
-                case 3:
-                    Console.WriteLine("Your Infirmary is already max rank");
-                    Console.ReadKey();
-                    break;
             }
         }
 

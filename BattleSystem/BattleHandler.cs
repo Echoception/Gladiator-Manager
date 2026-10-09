@@ -46,7 +46,7 @@ namespace Gladiator_Manager.BattleSystem
 
         }
 
-        public void ShowHealthValues(Gladiator glad1, Gladiator glad2)
+        private void ShowHealthValues(Gladiator glad1, Gladiator glad2)
         {
             //Console.WriteLine($"{glad1.Name} - {glad1.Health} \t\t {glad2.Name} - {glad2.Health}");
             Console.WriteLine();

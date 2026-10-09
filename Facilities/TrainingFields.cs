@@ -221,7 +221,7 @@ namespace Gladiator_Manager.Facilities
             _inFacilities.Clear();
         }
 
-        private void UpgradeToRank2(Player player)
+        public void UpgradeToRank2(Player player)
         {
             if(player.Gold >= _rank1UpgradeCost)
             {
@@ -235,7 +235,7 @@ namespace Gladiator_Manager.Facilities
             }
         }
 
-        private void UpgradeToRank3(Player player)
+        public void UpgradeToRank3(Player player)
         {
             if(player.Gold >= _rank2UpgradeCost)
             {
@@ -269,7 +269,7 @@ namespace Gladiator_Manager.Facilities
 
         private void RankUp()
         {
-            _rank += 1;
+            _rank++;
         }
         
         private void DisplayNotEnoughGold()
