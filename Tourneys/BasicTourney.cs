@@ -30,7 +30,7 @@ namespace Gladiator_Manager.Tourneys
         public List<BaseItem> LootTable { get; set; }
         public List<Gladiator> CompetingGladiators { get; set; }
         public BaseTrophy Trophy { get; set; }
-
+        public int Rank { get; set; }
         public int ListSize { get; set; }
         public string Name { get; set; }
         public bool Completed { get; set; }
@@ -74,6 +74,7 @@ namespace Gladiator_Manager.Tourneys
                 int playerPlacement = placement.Next(0, ListSize);
 
                 //CompetingGladiators.Add(playerGlad);
+                Gladiator gladiator = new();
 
                 for (int i = 0; i < ListSize; i++)
                 {
@@ -83,8 +84,24 @@ namespace Gladiator_Manager.Tourneys
                     }
                     else
                     {
-                        Gladiator gladiator = gladiatorCreator.CreateRandomGladiator();
-                        CompetingGladiators.Add(gladiator);
+                        switch(Rank)
+                        {
+                            case 1:
+                                gladiator = gladiatorCreator.CreateLowerGladiator();
+                                CompetingGladiators.Add(gladiator);
+                                break;
+                            case 2:
+                                gladiator = gladiatorCreator.CreateMediumGladiator();
+                                CompetingGladiators.Add(gladiator);
+                                break;
+                            case 3:
+                                gladiator = gladiatorCreator.CreateHighGladiator();
+                                CompetingGladiators.Add(gladiator);
+                                break;
+                        }
+
+                        //Gladiator gladiator = gladiatorCreator.CreateRandomGladiator();
+                        //CompetingGladiators.Add(gladiator);
                     }
                 }
                 return true;
@@ -104,7 +121,7 @@ namespace Gladiator_Manager.Tourneys
          *  so when the loop increments the index's should line up again to do [index] vs [index + 1]
          *  eg. [o] vs [1] - 0 loses : [1] becomes [0], [2] becomes [1], [3] becomes [2], loop++
          *      [1] vs [2] - 1 loses : [2] becomes [1], [3] becomes [2], [4] becomes [3], loop++  ect.
-         *      if only one list in the list then they win
+         *      if only one left in the list then they win
          *      
          *      should work with any single elimination tourney
          *      competitor amounts: 2, 4, 8, 16, 32, 64 ect.

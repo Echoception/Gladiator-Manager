@@ -20,6 +20,7 @@ namespace Gladiator_Manager.Tourneys.Cups
             Completed = false;
             Trophy = new AllTrophies.VeteransCupTrophy();
             LootTable = FillLootTable();
+            Rank = 3;
         }
 
         private List<BaseItem> FillLootTable()

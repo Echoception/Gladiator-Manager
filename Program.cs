@@ -9,6 +9,8 @@ using Gladiator_Manager.Shops;
 using Gladiator_Manager.SystemCreators;
 using Gladiator_Manager.Tourneys;
 
+// Saving and loading; Data is in: ????
+
 GladiatorCreator gladiatorCreator = new GladiatorCreator();
 
 BattleHandler battleHandler = new BattleHandler();

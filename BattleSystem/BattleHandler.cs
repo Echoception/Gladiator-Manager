@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace Gladiator_Manager.BattleSystem
 {
     internal class BattleHandler
-    {// Add turnCount?
+    {// Add turnCount? 
 
 
 
@@ -22,20 +22,46 @@ namespace Gladiator_Manager.BattleSystem
                     Console.Clear();
                     ShowHealthValues(glad1, glad2);
 
-                    if (glad1.Health > 0)
+                    if (glad1.Health > 0 && glad2.Health > 0 && glad1.Speed >= glad2.Speed)
                     {
                         glad2.TakeDamage(glad1);
                         //timer.StartTimer();
+                        Console.Clear();
+                        ShowHealthValues(glad1, glad2);
+
+                        if(glad2.Health > 0)
+                        {
+                            glad1.TakeDamage(glad2);
+                            //timer.StartTimer();
+                            Console.Clear();
+                            ShowHealthValues(glad1, glad2);
+                        }
+
                     }
-
-                    Console.Clear();
-                    ShowHealthValues(glad1, glad2);
-
-                    if (glad2.Health > 0)
+                    else if(glad1.Health > 0 && glad2.Health > 0)
                     {
                         glad1.TakeDamage(glad2);
                         //timer.StartTimer();
+                        Console.Clear();
+                        ShowHealthValues(glad1, glad2);
+
+                        if(glad1.Health > 0)
+                        {
+                            glad2.TakeDamage(glad1);
+                            //timer.StartTimer();
+                            Console.Clear();
+                            ShowHealthValues(glad1, glad2);
+                        }
                     }
+
+                    //Console.Clear();
+                    //ShowHealthValues(glad1, glad2);
+
+                    //if (glad2.Health > 0 && glad1.Health > 0)
+                    //{
+                    //    glad1.TakeDamage(glad2);
+                    //    //timer.StartTimer();
+                    //}
 
                 } while (glad1.Health > 0 && glad2.Health > 0);
 

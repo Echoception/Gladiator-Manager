@@ -20,6 +20,7 @@ namespace Gladiator_Manager.Tourneys.Cups
             Completed = false;
             Trophy = new AllTrophies.JourneyMansTrophy();
             LootTable = FillLootTable();
+            Rank = 2;
         }
 
 
